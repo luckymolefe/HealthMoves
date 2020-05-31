@@ -1,0 +1,3853 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Font table test</title>
+<style type="text/css" media="all">
+/* using this for fsqrl-converted webfonts */
+
+/* 
+	*************************************
+	THIS IS THE LINE YOU NEED TO COPY
+	************************************* 
+*/
+
+@font-face { font-family: 'metro'; src: url('metro-icons-fixed-2000-webfont.eot?x=1351252202'); src: url('metro-icons-fixed-2000-webfont.eot?#iefix') format('embedded-opentype'),  url('metro-icons-fixed-2000-webfont.woff?x=1351252202') format('woff'),  url('metro-icons-fixed-2000-webfont.ttf?x=1351252202') format('truetype'),  url('metro-icons-fixed-2000-webfont.svg?x=1351252202#metroicons8-3regular') format('svg'); font-weight: normal; font-style: normal; }
+
+/*
+	END OF THE LINE
+*/
+
+/* decent alignment */
+
+.clr { clear: both; }
+body { width: 960px; margin: 0 auto 50px auto; font-family: Arial, Helvetica, sans-serif; background: #333; color: #fff; }
+a { text-decoration: none; color: #fff; }
+.glyph { float: left; display: block; margin: 0 1px 1px 0; background: #666; }
+.glyph p { margin: 4px 0; padding: 0 }
+.glyph .char { font-family: "metro"; font-size: 64px; text-align: center; line-height: 64px; min-width: 80px; }
+.glyph .name { font-size: 11px; text-align: center; text-transform: uppercase; padding: 2px; margin: 0; font-family: "Courier New", Courier, monospace; }
+h3 { padding: 0; margin: 20px 0 5px 0; }
+#controls { background: #000; padding: 20px; margin:5px 0; }
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		var $ = function(id){ return document.getElementById(id); };
+		var setPrefix = function(el, pref){
+			var h = el.innerHTML;
+			h = h.replace(/o/im,'');
+			h = pref+h;
+			el.innerHTML = h;
+			return;
+		}
+		
+		var chars = document.getElementsByTagName('p');
+		var actfn = function(){
+			var c1 = $('ctl1');
+			var c2 = $('ctl2');
+			var c3 = $('ctl3');
+			
+			for(var i=0; i<chars.length; i++){
+				if(chars[i].className!='char')	 continue;
+				if(c1.checked){ setPrefix(chars[i],'') };
+				if(c2.checked){ setPrefix(chars[i],'O') };
+				if(c3.checked){ setPrefix(chars[i],'o') };
+			}
+		}
+		
+		
+		$('ctl1').onchange = actfn;
+		$('ctl2').onchange = actfn;
+		$('ctl3').onchange = actfn;
+	}
+</script>
+</head>
+
+<body>
+<div id="controls"> <b>Preview modes</b>
+	<label for="ctl1">
+		<input type="radio" id="ctl1" name="circ" checked="checked" />
+		No circles </label>
+	<label for="ctl2">
+		<input type="radio" id="ctl2" name="circ" />
+		Simple circle </label>
+	<label for="ctl3">
+		<input type="radio" id="ctl3" name="circ" />
+		Double circle </label>
+</div>
+
+<h3>How to use</h3>
+
+<br /><strong>Web instructions:</strong>
+<ol>
+	<li>Hit CTRL+U to view the source of this page</li>
+	<li>Copy the line starting with @font-face in the style tag of the source; make sure you copy all of it</li>
+	<li>Paste that line in your own CSS file or style tag</li>	
+	<li>Also copy the 4 font files required: EOT, SVG, WOFF, TTF</li>
+	<li>Update paths in the CSS line as required</li>
+</ol>
+
+<b>For Illustrator</b>
+<ol>
+	<li>Install the font (google for platform instructions)</li>
+	<li>Open Illustrator (it will hang 2-3 seconds to update its internal font cache)</li>
+	<li>Create a normal writing (text) area</li>
+	<li>Open Type > Glyphs</li>
+	<li>Find an icon then double click it</li>
+</ol>
+
+<b>Other GFX software</b>
+<ol><li>Install the font and use something like charmap.exe to find &amp; copy glyphs</li></ol>
+
+<b>To get circles or double circles</b>
+<ol>
+	<li>Insert any icon</li>
+	<li>Put text cursor before the icon</li>
+	<li>Press "o" or "O" (uppercase or lowercase Oslo)</li>
+</ol>
+
+
+<h3>Office</h3>
+<div class="glyph">
+	<p class="char">&#xa1;</p>
+	<p class="name"><a href="#a1" target="_blank">&amp;#xa1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xa2;</p>
+	<p class="name"><a href="#a2" target="_blank">&amp;#xa2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xa3;</p>
+	<p class="name"><a href="#a3" target="_blank">&amp;#xa3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xa4;</p>
+	<p class="name"><a href="#a4" target="_blank">&amp;#xa4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xa5;</p>
+	<p class="name"><a href="#a5" target="_blank">&amp;#xa5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xa6;</p>
+	<p class="name"><a href="#a6" target="_blank">&amp;#xa6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xa7;</p>
+	<p class="name"><a href="#a7" target="_blank">&amp;#xa7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xa8;</p>
+	<p class="name"><a href="#a8" target="_blank">&amp;#xa8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xa9;</p>
+	<p class="name"><a href="#a9" target="_blank">&amp;#xa9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xaa;</p>
+	<p class="name"><a href="#aa" target="_blank">&amp;#xaa;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xab;</p>
+	<p class="name"><a href="#ab" target="_blank">&amp;#xab;</a></p>
+</div>
+<br class="clr" />
+<h3>Nav-fav</h3>
+<div class="glyph">
+	<p class="char">&#xae;</p>
+	<p class="name"><a href="#ae" target="_blank">&amp;#xae;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xaf;</p>
+	<p class="name"><a href="#af" target="_blank">&amp;#xaf;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xb0;</p>
+	<p class="name"><a href="#b0" target="_blank">&amp;#xb0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xb1;</p>
+	<p class="name"><a href="#b1" target="_blank">&amp;#xb1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xb2;</p>
+	<p class="name"><a href="#b2" target="_blank">&amp;#xb2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xb3;</p>
+	<p class="name"><a href="#b3" target="_blank">&amp;#xb3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xb4;</p>
+	<p class="name"><a href="#b4" target="_blank">&amp;#xb4;</a></p>
+</div>
+<br class="clr" />
+<h3>Notices</h3>
+<div class="glyph">
+	<p class="char">&#xb6;</p>
+	<p class="name"><a href="#b6" target="_blank">&amp;#xb6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xb7;</p>
+	<p class="name"><a href="#b7" target="_blank">&amp;#xb7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xb8;</p>
+	<p class="name"><a href="#b8" target="_blank">&amp;#xb8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xb9;</p>
+	<p class="name"><a href="#b9" target="_blank">&amp;#xb9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xba;</p>
+	<p class="name"><a href="#ba" target="_blank">&amp;#xba;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xbb;</p>
+	<p class="name"><a href="#bb" target="_blank">&amp;#xbb;</a></p>
+</div>
+<br class="clr" />
+<h3>Messages</h3>
+<div class="glyph">
+	<p class="char">&#xbd;</p>
+	<p class="name"><a href="#bd" target="_blank">&amp;#xbd;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xbe;</p>
+	<p class="name"><a href="#be" target="_blank">&amp;#xbe;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xbf;</p>
+	<p class="name"><a href="#bf" target="_blank">&amp;#xbf;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xc0;</p>
+	<p class="name"><a href="#c0" target="_blank">&amp;#xc0;</a></p>
+</div>
+<br class="clr" />
+<h3>Reading</h3>
+<div class="glyph">
+	<p class="char">&#xc2;</p>
+	<p class="name"><a href="#c2" target="_blank">&amp;#xc2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xc3;</p>
+	<p class="name"><a href="#c3" target="_blank">&amp;#xc3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xc4;</p>
+	<p class="name"><a href="#c4" target="_blank">&amp;#xc4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xc5;</p>
+	<p class="name"><a href="#c5" target="_blank">&amp;#xc5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xc6;</p>
+	<p class="name"><a href="#c6" target="_blank">&amp;#xc6;</a></p>
+</div>
+<br class="clr" />
+<h3>Access</h3>
+<div class="glyph">
+	<p class="char">&#xc9;</p>
+	<p class="name"><a href="#c9" target="_blank">&amp;#xc9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xca;</p>
+	<p class="name"><a href="#ca" target="_blank">&amp;#xca;</a></p>
+</div>
+<br class="clr" />
+<h3>Signal Sheep</h3>
+<div class="glyph">
+	<p class="char">&#xcd;</p>
+	<p class="name"><a href="#cd" target="_blank">&amp;#xcd;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xce;</p>
+	<p class="name"><a href="#ce" target="_blank">&amp;#xce;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xcf;</p>
+	<p class="name"><a href="#cf" target="_blank">&amp;#xcf;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xd0;</p>
+	<p class="name"><a href="#d0" target="_blank">&amp;#xd0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xd1;</p>
+	<p class="name"><a href="#d1" target="_blank">&amp;#xd1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xd2;</p>
+	<p class="name"><a href="#d2" target="_blank">&amp;#xd2;</a></p>
+</div>
+<br class="clr" />
+<h3>Places</h3>
+<div class="glyph">
+	<p class="char">&#xd5;</p>
+	<p class="name"><a href="#d5" target="_blank">&amp;#xd5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xd6;</p>
+	<p class="name"><a href="#d6" target="_blank">&amp;#xd6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xd7;</p>
+	<p class="name"><a href="#d7" target="_blank">&amp;#xd7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xd8;</p>
+	<p class="name"><a href="#d8" target="_blank">&amp;#xd8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xd9;</p>
+	<p class="name"><a href="#d9" target="_blank">&amp;#xd9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xda;</p>
+	<p class="name"><a href="#da" target="_blank">&amp;#xda;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xdb;</p>
+	<p class="name"><a href="#db" target="_blank">&amp;#xdb;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xdc;</p>
+	<p class="name"><a href="#dc" target="_blank">&amp;#xdc;</a></p>
+</div>
+<br class="clr" />
+<h3>Places 2</h3>
+<div class="glyph">
+	<p class="char">&#xde;</p>
+	<p class="name"><a href="#de" target="_blank">&amp;#xde;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xdf;</p>
+	<p class="name"><a href="#df" target="_blank">&amp;#xdf;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xe0;</p>
+	<p class="name"><a href="#e0" target="_blank">&amp;#xe0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xe1;</p>
+	<p class="name"><a href="#e1" target="_blank">&amp;#xe1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xe2;</p>
+	<p class="name"><a href="#e2" target="_blank">&amp;#xe2;</a></p>
+</div>
+<br class="clr" />
+<h3>Game</h3>
+<div class="glyph">
+	<p class="char">&#xe5;</p>
+	<p class="name"><a href="#e5" target="_blank">&amp;#xe5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xe6;</p>
+	<p class="name"><a href="#e6" target="_blank">&amp;#xe6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xe7;</p>
+	<p class="name"><a href="#e7" target="_blank">&amp;#xe7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xe8;</p>
+	<p class="name"><a href="#e8" target="_blank">&amp;#xe8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xe9;</p>
+	<p class="name"><a href="#e9" target="_blank">&amp;#xe9;</a></p>
+</div>
+<br class="clr" />
+<h3>Fingers</h3>
+<div class="glyph">
+	<p class="char">&#xeb;</p>
+	<p class="name"><a href="#eb" target="_blank">&amp;#xeb;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xec;</p>
+	<p class="name"><a href="#ec" target="_blank">&amp;#xec;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xed;</p>
+	<p class="name"><a href="#ed" target="_blank">&amp;#xed;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xee;</p>
+	<p class="name"><a href="#ee" target="_blank">&amp;#xee;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xef;</p>
+	<p class="name"><a href="#ef" target="_blank">&amp;#xef;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xf0;</p>
+	<p class="name"><a href="#f0" target="_blank">&amp;#xf0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xf1;</p>
+	<p class="name"><a href="#f1" target="_blank">&amp;#xf1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xf2;</p>
+	<p class="name"><a href="#f2" target="_blank">&amp;#xf2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xf3;</p>
+	<p class="name"><a href="#f3" target="_blank">&amp;#xf3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#xf4;</p>
+	<p class="name"><a href="#f4" target="_blank">&amp;#xf4;</a></p>
+</div>
+<br class="clr" />
+<h3>Objects</h3>
+<div class="glyph">
+	<p class="char">&#x101;</p>
+	<p class="name"><a href="#101" target="_blank">&amp;#x101;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x102;</p>
+	<p class="name"><a href="#102" target="_blank">&amp;#x102;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x103;</p>
+	<p class="name"><a href="#103" target="_blank">&amp;#x103;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x104;</p>
+	<p class="name"><a href="#104" target="_blank">&amp;#x104;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x105;</p>
+	<p class="name"><a href="#105" target="_blank">&amp;#x105;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x106;</p>
+	<p class="name"><a href="#106" target="_blank">&amp;#x106;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x107;</p>
+	<p class="name"><a href="#107" target="_blank">&amp;#x107;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x108;</p>
+	<p class="name"><a href="#108" target="_blank">&amp;#x108;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x109;</p>
+	<p class="name"><a href="#109" target="_blank">&amp;#x109;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10a;</p>
+	<p class="name"><a href="#10a" target="_blank">&amp;#x10a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10b;</p>
+	<p class="name"><a href="#10b" target="_blank">&amp;#x10b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10c;</p>
+	<p class="name"><a href="#10c" target="_blank">&amp;#x10c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10d;</p>
+	<p class="name"><a href="#10d" target="_blank">&amp;#x10d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10e;</p>
+	<p class="name"><a href="#10e" target="_blank">&amp;#x10e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10f;</p>
+	<p class="name"><a href="#10f" target="_blank">&amp;#x10f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x110;</p>
+	<p class="name"><a href="#110" target="_blank">&amp;#x110;</a></p>
+</div>
+<br class="clr" />
+<h3>Imaging</h3>
+<div class="glyph">
+	<p class="char">&#x113;</p>
+	<p class="name"><a href="#113" target="_blank">&amp;#x113;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x114;</p>
+	<p class="name"><a href="#114" target="_blank">&amp;#x114;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x115;</p>
+	<p class="name"><a href="#115" target="_blank">&amp;#x115;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x116;</p>
+	<p class="name"><a href="#116" target="_blank">&amp;#x116;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x117;</p>
+	<p class="name"><a href="#117" target="_blank">&amp;#x117;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x118;</p>
+	<p class="name"><a href="#118" target="_blank">&amp;#x118;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x119;</p>
+	<p class="name"><a href="#119" target="_blank">&amp;#x119;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x11a;</p>
+	<p class="name"><a href="#11a" target="_blank">&amp;#x11a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x11b;</p>
+	<p class="name"><a href="#11b" target="_blank">&amp;#x11b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x11c;</p>
+	<p class="name"><a href="#11c" target="_blank">&amp;#x11c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x11d;</p>
+	<p class="name"><a href="#11d" target="_blank">&amp;#x11d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x11e;</p>
+	<p class="name"><a href="#11e" target="_blank">&amp;#x11e;</a></p>
+</div>
+<br class="clr" />
+<h3>SD</h3>
+<div class="glyph">
+	<p class="char">&#x121;</p>
+	<p class="name"><a href="#121" target="_blank">&amp;#x121;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x122;</p>
+	<p class="name"><a href="#122" target="_blank">&amp;#x122;</a></p>
+</div>
+<br class="clr" />
+<h3>Furnit</h3>
+<div class="glyph">
+	<p class="char">&#x124;</p>
+	<p class="name"><a href="#124" target="_blank">&amp;#x124;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x125;</p>
+	<p class="name"><a href="#125" target="_blank">&amp;#x125;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x126;</p>
+	<p class="name"><a href="#126" target="_blank">&amp;#x126;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x127;</p>
+	<p class="name"><a href="#127" target="_blank">&amp;#x127;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x128;</p>
+	<p class="name"><a href="#128" target="_blank">&amp;#x128;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x129;</p>
+	<p class="name"><a href="#129" target="_blank">&amp;#x129;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x12a;</p>
+	<p class="name"><a href="#12a" target="_blank">&amp;#x12a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x12b;</p>
+	<p class="name"><a href="#12b" target="_blank">&amp;#x12b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x12c;</p>
+	<p class="name"><a href="#12c" target="_blank">&amp;#x12c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x12d;</p>
+	<p class="name"><a href="#12d" target="_blank">&amp;#x12d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x12e;</p>
+	<p class="name"><a href="#12e" target="_blank">&amp;#x12e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x12f;</p>
+	<p class="name"><a href="#12f" target="_blank">&amp;#x12f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x130;</p>
+	<p class="name"><a href="#130" target="_blank">&amp;#x130;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x131;</p>
+	<p class="name"><a href="#131" target="_blank">&amp;#x131;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x132;</p>
+	<p class="name"><a href="#132" target="_blank">&amp;#x132;</a></p>
+</div>
+<br class="clr" />
+<h3>Cards</h3>
+<div class="glyph">
+	<p class="char">&#x135;</p>
+	<p class="name"><a href="#135" target="_blank">&amp;#x135;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x136;</p>
+	<p class="name"><a href="#136" target="_blank">&amp;#x136;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x137;</p>
+	<p class="name"><a href="#137" target="_blank">&amp;#x137;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x138;</p>
+	<p class="name"><a href="#138" target="_blank">&amp;#x138;</a></p>
+</div>
+<br class="clr" />
+<h3>Chess</h3>
+<div class="glyph">
+	<p class="char">&#x13a;</p>
+	<p class="name"><a href="#13a" target="_blank">&amp;#x13a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x13b;</p>
+	<p class="name"><a href="#13b" target="_blank">&amp;#x13b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x13c;</p>
+	<p class="name"><a href="#13c" target="_blank">&amp;#x13c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x13d;</p>
+	<p class="name"><a href="#13d" target="_blank">&amp;#x13d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x13e;</p>
+	<p class="name"><a href="#13e" target="_blank">&amp;#x13e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x13f;</p>
+	<p class="name"><a href="#13f" target="_blank">&amp;#x13f;</a></p>
+</div>
+<br class="clr" />
+<h3>Finance</h3>
+<div class="glyph">
+	<p class="char">&#x142;</p>
+	<p class="name"><a href="#142" target="_blank">&amp;#x142;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x143;</p>
+	<p class="name"><a href="#143" target="_blank">&amp;#x143;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x144;</p>
+	<p class="name"><a href="#144" target="_blank">&amp;#x144;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x145;</p>
+	<p class="name"><a href="#145" target="_blank">&amp;#x145;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x146;</p>
+	<p class="name"><a href="#146" target="_blank">&amp;#x146;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x147;</p>
+	<p class="name"><a href="#147" target="_blank">&amp;#x147;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x148;</p>
+	<p class="name"><a href="#148" target="_blank">&amp;#x148;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x149;</p>
+	<p class="name"><a href="#149" target="_blank">&amp;#x149;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x14a;</p>
+	<p class="name"><a href="#14a" target="_blank">&amp;#x14a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x14b;</p>
+	<p class="name"><a href="#14b" target="_blank">&amp;#x14b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x14c;</p>
+	<p class="name"><a href="#14c" target="_blank">&amp;#x14c;</a></p>
+</div>
+<br class="clr" />
+<h3>Business</h3>
+<div class="glyph">
+	<p class="char">&#x14e;</p>
+	<p class="name"><a href="#14e" target="_blank">&amp;#x14e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x14f;</p>
+	<p class="name"><a href="#14f" target="_blank">&amp;#x14f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x150;</p>
+	<p class="name"><a href="#150" target="_blank">&amp;#x150;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x151;</p>
+	<p class="name"><a href="#151" target="_blank">&amp;#x151;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x152;</p>
+	<p class="name"><a href="#152" target="_blank">&amp;#x152;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x153;</p>
+	<p class="name"><a href="#153" target="_blank">&amp;#x153;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x154;</p>
+	<p class="name"><a href="#154" target="_blank">&amp;#x154;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x155;</p>
+	<p class="name"><a href="#155" target="_blank">&amp;#x155;</a></p>
+</div>
+<br class="clr" />
+<h3>Clothing</h3>
+<div class="glyph">
+	<p class="char">&#x183;</p>
+	<p class="name"><a href="#183" target="_blank">&amp;#x183;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x184;</p>
+	<p class="name"><a href="#184" target="_blank">&amp;#x184;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x185;</p>
+	<p class="name"><a href="#185" target="_blank">&amp;#x185;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x186;</p>
+	<p class="name"><a href="#186" target="_blank">&amp;#x186;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x187;</p>
+	<p class="name"><a href="#187" target="_blank">&amp;#x187;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x188;</p>
+	<p class="name"><a href="#188" target="_blank">&amp;#x188;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x189;</p>
+	<p class="name"><a href="#189" target="_blank">&amp;#x189;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x18a;</p>
+	<p class="name"><a href="#18a" target="_blank">&amp;#x18a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x18b;</p>
+	<p class="name"><a href="#18b" target="_blank">&amp;#x18b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x18c;</p>
+	<p class="name"><a href="#18c" target="_blank">&amp;#x18c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x18d;</p>
+	<p class="name"><a href="#18d" target="_blank">&amp;#x18d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x18e;</p>
+	<p class="name"><a href="#18e" target="_blank">&amp;#x18e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x18f;</p>
+	<p class="name"><a href="#18f" target="_blank">&amp;#x18f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x190;</p>
+	<p class="name"><a href="#190" target="_blank">&amp;#x190;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x191;</p>
+	<p class="name"><a href="#191" target="_blank">&amp;#x191;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x192;</p>
+	<p class="name"><a href="#192" target="_blank">&amp;#x192;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x193;</p>
+	<p class="name"><a href="#193" target="_blank">&amp;#x193;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x194;</p>
+	<p class="name"><a href="#194" target="_blank">&amp;#x194;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x195;</p>
+	<p class="name"><a href="#195" target="_blank">&amp;#x195;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x196;</p>
+	<p class="name"><a href="#196" target="_blank">&amp;#x196;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x197;</p>
+	<p class="name"><a href="#197" target="_blank">&amp;#x197;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x198;</p>
+	<p class="name"><a href="#198" target="_blank">&amp;#x198;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x199;</p>
+	<p class="name"><a href="#199" target="_blank">&amp;#x199;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x19a;</p>
+	<p class="name"><a href="#19a" target="_blank">&amp;#x19a;</a></p>
+</div>
+<br class="clr" />
+<h3>Heroes</h3>
+<div class="glyph">
+	<p class="char">&#x1a1;</p>
+	<p class="name"><a href="#1a1" target="_blank">&amp;#x1a1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1a2;</p>
+	<p class="name"><a href="#1a2" target="_blank">&amp;#x1a2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1a3;</p>
+	<p class="name"><a href="#1a3" target="_blank">&amp;#x1a3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1a4;</p>
+	<p class="name"><a href="#1a4" target="_blank">&amp;#x1a4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1a5;</p>
+	<p class="name"><a href="#1a5" target="_blank">&amp;#x1a5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1a6;</p>
+	<p class="name"><a href="#1a6" target="_blank">&amp;#x1a6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1a7;</p>
+	<p class="name"><a href="#1a7" target="_blank">&amp;#x1a7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1a8;</p>
+	<p class="name"><a href="#1a8" target="_blank">&amp;#x1a8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1a9;</p>
+	<p class="name"><a href="#1a9" target="_blank">&amp;#x1a9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1aa;</p>
+	<p class="name"><a href="#1aa" target="_blank">&amp;#x1aa;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1ab;</p>
+	<p class="name"><a href="#1ab" target="_blank">&amp;#x1ab;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1ac;</p>
+	<p class="name"><a href="#1ac" target="_blank">&amp;#x1ac;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1ad;</p>
+	<p class="name"><a href="#1ad" target="_blank">&amp;#x1ad;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1ae;</p>
+	<p class="name"><a href="#1ae" target="_blank">&amp;#x1ae;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1af;</p>
+	<p class="name"><a href="#1af" target="_blank">&amp;#x1af;</a></p>
+</div>
+<br class="clr" />
+<h3>Star Trek</h3>
+<div class="glyph">
+	<p class="char">&#x1b3;</p>
+	<p class="name"><a href="#1b3" target="_blank">&amp;#x1b3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1b4;</p>
+	<p class="name"><a href="#1b4" target="_blank">&amp;#x1b4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1b5;</p>
+	<p class="name"><a href="#1b5" target="_blank">&amp;#x1b5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1b6;</p>
+	<p class="name"><a href="#1b6" target="_blank">&amp;#x1b6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1b7;</p>
+	<p class="name"><a href="#1b7" target="_blank">&amp;#x1b7;</a></p>
+</div>
+<br class="clr" />
+<h3>Star Trek Equip</h3>
+<div class="glyph">
+	<p class="char">&#x1b9;</p>
+	<p class="name"><a href="#1b9" target="_blank">&amp;#x1b9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1ba;</p>
+	<p class="name"><a href="#1ba" target="_blank">&amp;#x1ba;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1bb;</p>
+	<p class="name"><a href="#1bb" target="_blank">&amp;#x1bb;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1bc;</p>
+	<p class="name"><a href="#1bc" target="_blank">&amp;#x1bc;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1bd;</p>
+	<p class="name"><a href="#1bd" target="_blank">&amp;#x1bd;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1be;</p>
+	<p class="name"><a href="#1be" target="_blank">&amp;#x1be;</a></p>
+</div>
+<br class="clr" />
+<h3>Gambl</h3>
+<div class="glyph">
+	<p class="char">&#x1c2;</p>
+	<p class="name"><a href="#1c2" target="_blank">&amp;#x1c2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1c3;</p>
+	<p class="name"><a href="#1c3" target="_blank">&amp;#x1c3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1c4;</p>
+	<p class="name"><a href="#1c4" target="_blank">&amp;#x1c4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1c5;</p>
+	<p class="name"><a href="#1c5" target="_blank">&amp;#x1c5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1c6;</p>
+	<p class="name"><a href="#1c6" target="_blank">&amp;#x1c6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1c7;</p>
+	<p class="name"><a href="#1c7" target="_blank">&amp;#x1c7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1c8;</p>
+	<p class="name"><a href="#1c8" target="_blank">&amp;#x1c8;</a></p>
+</div>
+<br class="clr" />
+<h3>Dread</h3>
+<div class="glyph">
+	<p class="char">&#x1cd;</p>
+	<p class="name"><a href="#1cd" target="_blank">&amp;#x1cd;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1ce;</p>
+	<p class="name"><a href="#1ce" target="_blank">&amp;#x1ce;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1cf;</p>
+	<p class="name"><a href="#1cf" target="_blank">&amp;#x1cf;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1d0;</p>
+	<p class="name"><a href="#1d0" target="_blank">&amp;#x1d0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1d1;</p>
+	<p class="name"><a href="#1d1" target="_blank">&amp;#x1d1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1d2;</p>
+	<p class="name"><a href="#1d2" target="_blank">&amp;#x1d2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1d3;</p>
+	<p class="name"><a href="#1d3" target="_blank">&amp;#x1d3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1d4;</p>
+	<p class="name"><a href="#1d4" target="_blank">&amp;#x1d4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1d5;</p>
+	<p class="name"><a href="#1d5" target="_blank">&amp;#x1d5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1d6;</p>
+	<p class="name"><a href="#1d6" target="_blank">&amp;#x1d6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1d7;</p>
+	<p class="name"><a href="#1d7" target="_blank">&amp;#x1d7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1d8;</p>
+	<p class="name"><a href="#1d8" target="_blank">&amp;#x1d8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1d9;</p>
+	<p class="name"><a href="#1d9" target="_blank">&amp;#x1d9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1da;</p>
+	<p class="name"><a href="#1da" target="_blank">&amp;#x1da;</a></p>
+</div>
+<br class="clr" />
+<h3>War</h3>
+<div class="glyph">
+	<p class="char">&#x1e3;</p>
+	<p class="name"><a href="#1e3" target="_blank">&amp;#x1e3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1e4;</p>
+	<p class="name"><a href="#1e4" target="_blank">&amp;#x1e4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1e5;</p>
+	<p class="name"><a href="#1e5" target="_blank">&amp;#x1e5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1e6;</p>
+	<p class="name"><a href="#1e6" target="_blank">&amp;#x1e6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1e7;</p>
+	<p class="name"><a href="#1e7" target="_blank">&amp;#x1e7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1e8;</p>
+	<p class="name"><a href="#1e8" target="_blank">&amp;#x1e8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1e9;</p>
+	<p class="name"><a href="#1e9" target="_blank">&amp;#x1e9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1ea;</p>
+	<p class="name"><a href="#1ea" target="_blank">&amp;#x1ea;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1eb;</p>
+	<p class="name"><a href="#1eb" target="_blank">&amp;#x1eb;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1ec;</p>
+	<p class="name"><a href="#1ec" target="_blank">&amp;#x1ec;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1ed;</p>
+	<p class="name"><a href="#1ed" target="_blank">&amp;#x1ed;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1ee;</p>
+	<p class="name"><a href="#1ee" target="_blank">&amp;#x1ee;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1ef;</p>
+	<p class="name"><a href="#1ef" target="_blank">&amp;#x1ef;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1f0;</p>
+	<p class="name"><a href="#1f0" target="_blank">&amp;#x1f0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1f1;</p>
+	<p class="name"><a href="#1f1" target="_blank">&amp;#x1f1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1f2;</p>
+	<p class="name"><a href="#1f2" target="_blank">&amp;#x1f2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1f3;</p>
+	<p class="name"><a href="#1f3" target="_blank">&amp;#x1f3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1f4;</p>
+	<p class="name"><a href="#1f4" target="_blank">&amp;#x1f4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1f5;</p>
+	<p class="name"><a href="#1f5" target="_blank">&amp;#x1f5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1f6;</p>
+	<p class="name"><a href="#1f6" target="_blank">&amp;#x1f6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1f7;</p>
+	<p class="name"><a href="#1f7" target="_blank">&amp;#x1f7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x1f8;</p>
+	<p class="name"><a href="#1f8" target="_blank">&amp;#x1f8;</a></p>
+</div>
+<br class="clr" />
+<h3>Misc - app</h3>
+<div class="glyph">
+	<p class="char">&#x250;</p>
+	<p class="name"><a href="#250" target="_blank">&amp;#x250;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x251;</p>
+	<p class="name"><a href="#251" target="_blank">&amp;#x251;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x252;</p>
+	<p class="name"><a href="#252" target="_blank">&amp;#x252;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x253;</p>
+	<p class="name"><a href="#253" target="_blank">&amp;#x253;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x254;</p>
+	<p class="name"><a href="#254" target="_blank">&amp;#x254;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x255;</p>
+	<p class="name"><a href="#255" target="_blank">&amp;#x255;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x256;</p>
+	<p class="name"><a href="#256" target="_blank">&amp;#x256;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x257;</p>
+	<p class="name"><a href="#257" target="_blank">&amp;#x257;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x258;</p>
+	<p class="name"><a href="#258" target="_blank">&amp;#x258;</a></p>
+</div>
+<br class="clr" />
+<h3>User</h3>
+<div class="glyph">
+	<p class="char">&#x25b;</p>
+	<p class="name"><a href="#25b" target="_blank">&amp;#x25b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x25c;</p>
+	<p class="name"><a href="#25c" target="_blank">&amp;#x25c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x25d;</p>
+	<p class="name"><a href="#25d" target="_blank">&amp;#x25d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x25e;</p>
+	<p class="name"><a href="#25e" target="_blank">&amp;#x25e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x25f;</p>
+	<p class="name"><a href="#25f" target="_blank">&amp;#x25f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x260;</p>
+	<p class="name"><a href="#260" target="_blank">&amp;#x260;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x261;</p>
+	<p class="name"><a href="#261" target="_blank">&amp;#x261;</a></p>
+</div>
+<br class="clr" />
+<h3>Misc - office</h3>
+<div class="glyph">
+	<p class="char">&#x264;</p>
+	<p class="name"><a href="#264" target="_blank">&amp;#x264;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x265;</p>
+	<p class="name"><a href="#265" target="_blank">&amp;#x265;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x266;</p>
+	<p class="name"><a href="#266" target="_blank">&amp;#x266;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x267;</p>
+	<p class="name"><a href="#267" target="_blank">&amp;#x267;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x268;</p>
+	<p class="name"><a href="#268" target="_blank">&amp;#x268;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x269;</p>
+	<p class="name"><a href="#269" target="_blank">&amp;#x269;</a></p>
+</div>
+<br class="clr" />
+<h3>Lock</h3>
+<div class="glyph">
+	<p class="char">&#x26b;</p>
+	<p class="name"><a href="#26b" target="_blank">&amp;#x26b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x26c;</p>
+	<p class="name"><a href="#26c" target="_blank">&amp;#x26c;</a></p>
+</div>
+<br class="clr" />
+<h3>Misc - office 2</h3>
+<div class="glyph">
+	<p class="char">&#x26e;</p>
+	<p class="name"><a href="#26e" target="_blank">&amp;#x26e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x26f;</p>
+	<p class="name"><a href="#26f" target="_blank">&amp;#x26f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x270;</p>
+	<p class="name"><a href="#270" target="_blank">&amp;#x270;</a></p>
+</div>
+<br class="clr" />
+<h3>Arrows</h3>
+<div class="glyph">
+	<p class="char">&#x272;</p>
+	<p class="name"><a href="#272" target="_blank">&amp;#x272;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x273;</p>
+	<p class="name"><a href="#273" target="_blank">&amp;#x273;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x274;</p>
+	<p class="name"><a href="#274" target="_blank">&amp;#x274;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x275;</p>
+	<p class="name"><a href="#275" target="_blank">&amp;#x275;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x276;</p>
+	<p class="name"><a href="#276" target="_blank">&amp;#x276;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x277;</p>
+	<p class="name"><a href="#277" target="_blank">&amp;#x277;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x278;</p>
+	<p class="name"><a href="#278" target="_blank">&amp;#x278;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x279;</p>
+	<p class="name"><a href="#279" target="_blank">&amp;#x279;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x27a;</p>
+	<p class="name"><a href="#27a" target="_blank">&amp;#x27a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x27b;</p>
+	<p class="name"><a href="#27b" target="_blank">&amp;#x27b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x27c;</p>
+	<p class="name"><a href="#27c" target="_blank">&amp;#x27c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x27d;</p>
+	<p class="name"><a href="#27d" target="_blank">&amp;#x27d;</a></p>
+</div>
+<br class="clr" />
+<h3>Ecomm</h3>
+<div class="glyph">
+	<p class="char">&#x27f;</p>
+	<p class="name"><a href="#27f" target="_blank">&amp;#x27f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x280;</p>
+	<p class="name"><a href="#280" target="_blank">&amp;#x280;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x281;</p>
+	<p class="name"><a href="#281" target="_blank">&amp;#x281;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x282;</p>
+	<p class="name"><a href="#282" target="_blank">&amp;#x282;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x283;</p>
+	<p class="name"><a href="#283" target="_blank">&amp;#x283;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x284;</p>
+	<p class="name"><a href="#284" target="_blank">&amp;#x284;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x285;</p>
+	<p class="name"><a href="#285" target="_blank">&amp;#x285;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x286;</p>
+	<p class="name"><a href="#286" target="_blank">&amp;#x286;</a></p>
+</div>
+<br class="clr" />
+<h3>Ecomm 2</h3>
+<div class="glyph">
+	<p class="char">&#x288;</p>
+	<p class="name"><a href="#288" target="_blank">&amp;#x288;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x289;</p>
+	<p class="name"><a href="#289" target="_blank">&amp;#x289;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x28a;</p>
+	<p class="name"><a href="#28a" target="_blank">&amp;#x28a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x28b;</p>
+	<p class="name"><a href="#28b" target="_blank">&amp;#x28b;</a></p>
+</div>
+<br class="clr" />
+<h3>App - general</h3>
+<div class="glyph">
+	<p class="char">&#x28d;</p>
+	<p class="name"><a href="#28d" target="_blank">&amp;#x28d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x28e;</p>
+	<p class="name"><a href="#28e" target="_blank">&amp;#x28e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x28f;</p>
+	<p class="name"><a href="#28f" target="_blank">&amp;#x28f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x290;</p>
+	<p class="name"><a href="#290" target="_blank">&amp;#x290;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x291;</p>
+	<p class="name"><a href="#291" target="_blank">&amp;#x291;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x292;</p>
+	<p class="name"><a href="#292" target="_blank">&amp;#x292;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x293;</p>
+	<p class="name"><a href="#293" target="_blank">&amp;#x293;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x294;</p>
+	<p class="name"><a href="#294" target="_blank">&amp;#x294;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x295;</p>
+	<p class="name"><a href="#295" target="_blank">&amp;#x295;</a></p>
+</div>
+<br class="clr" />
+<h3>Transfer</h3>
+<div class="glyph">
+	<p class="char">&#x297;</p>
+	<p class="name"><a href="#297" target="_blank">&amp;#x297;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x298;</p>
+	<p class="name"><a href="#298" target="_blank">&amp;#x298;</a></p>
+</div>
+<br class="clr" />
+<h3>Graph</h3>
+<div class="glyph">
+	<p class="char">&#x29a;</p>
+	<p class="name"><a href="#29a" target="_blank">&amp;#x29a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x29b;</p>
+	<p class="name"><a href="#29b" target="_blank">&amp;#x29b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x29c;</p>
+	<p class="name"><a href="#29c" target="_blank">&amp;#x29c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x29d;</p>
+	<p class="name"><a href="#29d" target="_blank">&amp;#x29d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x29e;</p>
+	<p class="name"><a href="#29e" target="_blank">&amp;#x29e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x29f;</p>
+	<p class="name"><a href="#29f" target="_blank">&amp;#x29f;</a></p>
+</div>
+<br class="clr" />
+<h3>Comm</h3>
+<div class="glyph">
+	<p class="char">&#x2a1;</p>
+	<p class="name"><a href="#2a1" target="_blank">&amp;#x2a1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2a2;</p>
+	<p class="name"><a href="#2a2" target="_blank">&amp;#x2a2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2a3;</p>
+	<p class="name"><a href="#2a3" target="_blank">&amp;#x2a3;</a></p>
+</div>
+<br class="clr" />
+<h3>USB</h3>
+<div class="glyph">
+	<p class="char">&#x38e;</p>
+	<p class="name"><a href="#38e" target="_blank">&amp;#x38e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x38f;</p>
+	<p class="name"><a href="#38f" target="_blank">&amp;#x38f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x390;</p>
+	<p class="name"><a href="#390" target="_blank">&amp;#x390;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x391;</p>
+	<p class="name"><a href="#391" target="_blank">&amp;#x391;</a></p>
+</div>
+<br class="clr" />
+<h3>Network</h3>
+<div class="glyph">
+	<p class="char">&#x393;</p>
+	<p class="name"><a href="#393" target="_blank">&amp;#x393;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x394;</p>
+	<p class="name"><a href="#394" target="_blank">&amp;#x394;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x395;</p>
+	<p class="name"><a href="#395" target="_blank">&amp;#x395;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x396;</p>
+	<p class="name"><a href="#396" target="_blank">&amp;#x396;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x397;</p>
+	<p class="name"><a href="#397" target="_blank">&amp;#x397;</a></p>
+</div>
+<br class="clr" />
+<h3>Flora</h3>
+<div class="glyph">
+	<p class="char">&#x399;</p>
+	<p class="name"><a href="#399" target="_blank">&amp;#x399;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x39a;</p>
+	<p class="name"><a href="#39a" target="_blank">&amp;#x39a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x39b;</p>
+	<p class="name"><a href="#39b" target="_blank">&amp;#x39b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x39c;</p>
+	<p class="name"><a href="#39c" target="_blank">&amp;#x39c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x39d;</p>
+	<p class="name"><a href="#39d" target="_blank">&amp;#x39d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x39e;</p>
+	<p class="name"><a href="#39e" target="_blank">&amp;#x39e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x39f;</p>
+	<p class="name"><a href="#39f" target="_blank">&amp;#x39f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3a0;</p>
+	<p class="name"><a href="#3a0" target="_blank">&amp;#x3a0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3a1;</p>
+	<p class="name"><a href="#3a1" target="_blank">&amp;#x3a1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3a2;</p>
+	<p class="name"><a href="#3a2" target="_blank">&amp;#x3a2;</a></p>
+</div>
+<br class="clr" />
+<h3>Prints / Animal</h3>
+<div class="glyph">
+	<p class="char">&#x3a4;</p>
+	<p class="name"><a href="#3a4" target="_blank">&amp;#x3a4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3a5;</p>
+	<p class="name"><a href="#3a5" target="_blank">&amp;#x3a5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3a6;</p>
+	<p class="name"><a href="#3a6" target="_blank">&amp;#x3a6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3a7;</p>
+	<p class="name"><a href="#3a7" target="_blank">&amp;#x3a7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3a8;</p>
+	<p class="name"><a href="#3a8" target="_blank">&amp;#x3a8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3a9;</p>
+	<p class="name"><a href="#3a9" target="_blank">&amp;#x3a9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3aa;</p>
+	<p class="name"><a href="#3aa" target="_blank">&amp;#x3aa;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3ab;</p>
+	<p class="name"><a href="#3ab" target="_blank">&amp;#x3ab;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3ac;</p>
+	<p class="name"><a href="#3ac" target="_blank">&amp;#x3ac;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3ad;</p>
+	<p class="name"><a href="#3ad" target="_blank">&amp;#x3ad;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3ae;</p>
+	<p class="name"><a href="#3ae" target="_blank">&amp;#x3ae;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3af;</p>
+	<p class="name"><a href="#3af" target="_blank">&amp;#x3af;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3b0;</p>
+	<p class="name"><a href="#3b0" target="_blank">&amp;#x3b0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3b1;</p>
+	<p class="name"><a href="#3b1" target="_blank">&amp;#x3b1;</a></p>
+</div>
+<br class="clr" />
+<h3>OS</h3>
+<div class="glyph">
+	<p class="char">&#x3b4;</p>
+	<p class="name"><a href="#3b4" target="_blank">&amp;#x3b4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3b5;</p>
+	<p class="name"><a href="#3b5" target="_blank">&amp;#x3b5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3b6;</p>
+	<p class="name"><a href="#3b6" target="_blank">&amp;#x3b6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3b7;</p>
+	<p class="name"><a href="#3b7" target="_blank">&amp;#x3b7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3b8;</p>
+	<p class="name"><a href="#3b8" target="_blank">&amp;#x3b8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3b9;</p>
+	<p class="name"><a href="#3b9" target="_blank">&amp;#x3b9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3ba;</p>
+	<p class="name"><a href="#3ba" target="_blank">&amp;#x3ba;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3bb;</p>
+	<p class="name"><a href="#3bb" target="_blank">&amp;#x3bb;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3bc;</p>
+	<p class="name"><a href="#3bc" target="_blank">&amp;#x3bc;</a></p>
+</div>
+<br class="clr" />
+<h3>App - window</h3>
+<div class="glyph">
+	<p class="char">&#x3be;</p>
+	<p class="name"><a href="#3be" target="_blank">&amp;#x3be;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3bf;</p>
+	<p class="name"><a href="#3bf" target="_blank">&amp;#x3bf;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3c0;</p>
+	<p class="name"><a href="#3c0" target="_blank">&amp;#x3c0;</a></p>
+</div>
+<br class="clr" />
+<h3>Sports</h3>
+<div class="glyph">
+	<p class="char">&#x3c3;</p>
+	<p class="name"><a href="#3c3" target="_blank">&amp;#x3c3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3c4;</p>
+	<p class="name"><a href="#3c4" target="_blank">&amp;#x3c4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3c5;</p>
+	<p class="name"><a href="#3c5" target="_blank">&amp;#x3c5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3c6;</p>
+	<p class="name"><a href="#3c6" target="_blank">&amp;#x3c6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3c7;</p>
+	<p class="name"><a href="#3c7" target="_blank">&amp;#x3c7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3c8;</p>
+	<p class="name"><a href="#3c8" target="_blank">&amp;#x3c8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3c9;</p>
+	<p class="name"><a href="#3c9" target="_blank">&amp;#x3c9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3ca;</p>
+	<p class="name"><a href="#3ca" target="_blank">&amp;#x3ca;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3cb;</p>
+	<p class="name"><a href="#3cb" target="_blank">&amp;#x3cb;</a></p>
+</div>
+<br class="clr" />
+<h3>Music</h3>
+<div class="glyph">
+	<p class="char">&#x3ce;</p>
+	<p class="name"><a href="#3ce" target="_blank">&amp;#x3ce;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3cf;</p>
+	<p class="name"><a href="#3cf" target="_blank">&amp;#x3cf;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3d0;</p>
+	<p class="name"><a href="#3d0" target="_blank">&amp;#x3d0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3d1;</p>
+	<p class="name"><a href="#3d1" target="_blank">&amp;#x3d1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3d2;</p>
+	<p class="name"><a href="#3d2" target="_blank">&amp;#x3d2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3d3;</p>
+	<p class="name"><a href="#3d3" target="_blank">&amp;#x3d3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3d4;</p>
+	<p class="name"><a href="#3d4" target="_blank">&amp;#x3d4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3d5;</p>
+	<p class="name"><a href="#3d5" target="_blank">&amp;#x3d5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3d6;</p>
+	<p class="name"><a href="#3d6" target="_blank">&amp;#x3d6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3d7;</p>
+	<p class="name"><a href="#3d7" target="_blank">&amp;#x3d7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3d8;</p>
+	<p class="name"><a href="#3d8" target="_blank">&amp;#x3d8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3d9;</p>
+	<p class="name"><a href="#3d9" target="_blank">&amp;#x3d9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3da;</p>
+	<p class="name"><a href="#3da" target="_blank">&amp;#x3da;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3db;</p>
+	<p class="name"><a href="#3db" target="_blank">&amp;#x3db;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3dc;</p>
+	<p class="name"><a href="#3dc" target="_blank">&amp;#x3dc;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3dd;</p>
+	<p class="name"><a href="#3dd" target="_blank">&amp;#x3dd;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3de;</p>
+	<p class="name"><a href="#3de" target="_blank">&amp;#x3de;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3df;</p>
+	<p class="name"><a href="#3df" target="_blank">&amp;#x3df;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3e0;</p>
+	<p class="name"><a href="#3e0" target="_blank">&amp;#x3e0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3e1;</p>
+	<p class="name"><a href="#3e1" target="_blank">&amp;#x3e1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3e2;</p>
+	<p class="name"><a href="#3e2" target="_blank">&amp;#x3e2;</a></p>
+</div>
+<br class="clr" />
+<h3>Transport</h3>
+<div class="glyph">
+	<p class="char">&#x3e5;</p>
+	<p class="name"><a href="#3e5" target="_blank">&amp;#x3e5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3e6;</p>
+	<p class="name"><a href="#3e6" target="_blank">&amp;#x3e6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3e7;</p>
+	<p class="name"><a href="#3e7" target="_blank">&amp;#x3e7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3e8;</p>
+	<p class="name"><a href="#3e8" target="_blank">&amp;#x3e8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3e9;</p>
+	<p class="name"><a href="#3e9" target="_blank">&amp;#x3e9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3ea;</p>
+	<p class="name"><a href="#3ea" target="_blank">&amp;#x3ea;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3eb;</p>
+	<p class="name"><a href="#3eb" target="_blank">&amp;#x3eb;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3ec;</p>
+	<p class="name"><a href="#3ec" target="_blank">&amp;#x3ec;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3ed;</p>
+	<p class="name"><a href="#3ed" target="_blank">&amp;#x3ed;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3ee;</p>
+	<p class="name"><a href="#3ee" target="_blank">&amp;#x3ee;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3ef;</p>
+	<p class="name"><a href="#3ef" target="_blank">&amp;#x3ef;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3f0;</p>
+	<p class="name"><a href="#3f0" target="_blank">&amp;#x3f0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3f1;</p>
+	<p class="name"><a href="#3f1" target="_blank">&amp;#x3f1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3f2;</p>
+	<p class="name"><a href="#3f2" target="_blank">&amp;#x3f2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3f3;</p>
+	<p class="name"><a href="#3f3" target="_blank">&amp;#x3f3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3f4;</p>
+	<p class="name"><a href="#3f4" target="_blank">&amp;#x3f4;</a></p>
+</div>
+<br class="clr" />
+<h3>Monet</h3>
+<div class="glyph">
+	<p class="char">&#x3f6;</p>
+	<p class="name"><a href="#3f6" target="_blank">&amp;#x3f6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3f7;</p>
+	<p class="name"><a href="#3f7" target="_blank">&amp;#x3f7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x3f8;</p>
+	<p class="name"><a href="#3f8" target="_blank">&amp;#x3f8;</a></p>
+</div>
+<br class="clr" />
+<h3>MS Office</h3>
+<div class="glyph">
+	<p class="char">&#x400;</p>
+	<p class="name"><a href="#400" target="_blank">&amp;#x400;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x401;</p>
+	<p class="name"><a href="#401" target="_blank">&amp;#x401;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x402;</p>
+	<p class="name"><a href="#402" target="_blank">&amp;#x402;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x403;</p>
+	<p class="name"><a href="#403" target="_blank">&amp;#x403;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x404;</p>
+	<p class="name"><a href="#404" target="_blank">&amp;#x404;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x405;</p>
+	<p class="name"><a href="#405" target="_blank">&amp;#x405;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x406;</p>
+	<p class="name"><a href="#406" target="_blank">&amp;#x406;</a></p>
+</div>
+<br class="clr" />
+<h3>Browsers</h3>
+<div class="glyph">
+	<p class="char">&#x408;</p>
+	<p class="name"><a href="#408" target="_blank">&amp;#x408;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x409;</p>
+	<p class="name"><a href="#409" target="_blank">&amp;#x409;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x40a;</p>
+	<p class="name"><a href="#40a" target="_blank">&amp;#x40a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x40b;</p>
+	<p class="name"><a href="#40b" target="_blank">&amp;#x40b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x40c;</p>
+	<p class="name"><a href="#40c" target="_blank">&amp;#x40c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x40d;</p>
+	<p class="name"><a href="#40d" target="_blank">&amp;#x40d;</a></p>
+</div>
+<br class="clr" />
+<h3>Adobe</h3>
+<div class="glyph">
+	<p class="char">&#x40f;</p>
+	<p class="name"><a href="#40f" target="_blank">&amp;#x40f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x410;</p>
+	<p class="name"><a href="#410" target="_blank">&amp;#x410;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x411;</p>
+	<p class="name"><a href="#411" target="_blank">&amp;#x411;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x412;</p>
+	<p class="name"><a href="#412" target="_blank">&amp;#x412;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x413;</p>
+	<p class="name"><a href="#413" target="_blank">&amp;#x413;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x414;</p>
+	<p class="name"><a href="#414" target="_blank">&amp;#x414;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x415;</p>
+	<p class="name"><a href="#415" target="_blank">&amp;#x415;</a></p>
+</div>
+<br class="clr" />
+<h3>Filetypes</h3>
+<div class="glyph">
+	<p class="char">&#x416;</p>
+	<p class="name"><a href="#416" target="_blank">&amp;#x416;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x417;</p>
+	<p class="name"><a href="#417" target="_blank">&amp;#x417;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x418;</p>
+	<p class="name"><a href="#418" target="_blank">&amp;#x418;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x419;</p>
+	<p class="name"><a href="#419" target="_blank">&amp;#x419;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x41a;</p>
+	<p class="name"><a href="#41a" target="_blank">&amp;#x41a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x41b;</p>
+	<p class="name"><a href="#41b" target="_blank">&amp;#x41b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x41c;</p>
+	<p class="name"><a href="#41c" target="_blank">&amp;#x41c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x41d;</p>
+	<p class="name"><a href="#41d" target="_blank">&amp;#x41d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x41e;</p>
+	<p class="name"><a href="#41e" target="_blank">&amp;#x41e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x41f;</p>
+	<p class="name"><a href="#41f" target="_blank">&amp;#x41f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x420;</p>
+	<p class="name"><a href="#420" target="_blank">&amp;#x420;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x421;</p>
+	<p class="name"><a href="#421" target="_blank">&amp;#x421;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x422;</p>
+	<p class="name"><a href="#422" target="_blank">&amp;#x422;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x423;</p>
+	<p class="name"><a href="#423" target="_blank">&amp;#x423;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x424;</p>
+	<p class="name"><a href="#424" target="_blank">&amp;#x424;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x425;</p>
+	<p class="name"><a href="#425" target="_blank">&amp;#x425;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x426;</p>
+	<p class="name"><a href="#426" target="_blank">&amp;#x426;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x427;</p>
+	<p class="name"><a href="#427" target="_blank">&amp;#x427;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x428;</p>
+	<p class="name"><a href="#428" target="_blank">&amp;#x428;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x429;</p>
+	<p class="name"><a href="#429" target="_blank">&amp;#x429;</a></p>
+</div>
+<br class="clr" />
+<h3>Folders</h3>
+<div class="glyph">
+	<p class="char">&#x42b;</p>
+	<p class="name"><a href="#42b" target="_blank">&amp;#x42b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x42c;</p>
+	<p class="name"><a href="#42c" target="_blank">&amp;#x42c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x42d;</p>
+	<p class="name"><a href="#42d" target="_blank">&amp;#x42d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x42e;</p>
+	<p class="name"><a href="#42e" target="_blank">&amp;#x42e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x42f;</p>
+	<p class="name"><a href="#42f" target="_blank">&amp;#x42f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x430;</p>
+	<p class="name"><a href="#430" target="_blank">&amp;#x430;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x431;</p>
+	<p class="name"><a href="#431" target="_blank">&amp;#x431;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x432;</p>
+	<p class="name"><a href="#432" target="_blank">&amp;#x432;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x433;</p>
+	<p class="name"><a href="#433" target="_blank">&amp;#x433;</a></p>
+</div>
+<br class="clr" />
+<h3>Numerals</h3>
+<div class="glyph">
+	<p class="char">&#x436;</p>
+	<p class="name"><a href="#436" target="_blank">&amp;#x436;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x437;</p>
+	<p class="name"><a href="#437" target="_blank">&amp;#x437;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x438;</p>
+	<p class="name"><a href="#438" target="_blank">&amp;#x438;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x439;</p>
+	<p class="name"><a href="#439" target="_blank">&amp;#x439;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x43a;</p>
+	<p class="name"><a href="#43a" target="_blank">&amp;#x43a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x43b;</p>
+	<p class="name"><a href="#43b" target="_blank">&amp;#x43b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x43c;</p>
+	<p class="name"><a href="#43c" target="_blank">&amp;#x43c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x43d;</p>
+	<p class="name"><a href="#43d" target="_blank">&amp;#x43d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x43e;</p>
+	<p class="name"><a href="#43e" target="_blank">&amp;#x43e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x43f;</p>
+	<p class="name"><a href="#43f" target="_blank">&amp;#x43f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x440;</p>
+	<p class="name"><a href="#440" target="_blank">&amp;#x440;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x441;</p>
+	<p class="name"><a href="#441" target="_blank">&amp;#x441;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x442;</p>
+	<p class="name"><a href="#442" target="_blank">&amp;#x442;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x443;</p>
+	<p class="name"><a href="#443" target="_blank">&amp;#x443;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x444;</p>
+	<p class="name"><a href="#444" target="_blank">&amp;#x444;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x445;</p>
+	<p class="name"><a href="#445" target="_blank">&amp;#x445;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x446;</p>
+	<p class="name"><a href="#446" target="_blank">&amp;#x446;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x447;</p>
+	<p class="name"><a href="#447" target="_blank">&amp;#x447;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x448;</p>
+	<p class="name"><a href="#448" target="_blank">&amp;#x448;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x449;</p>
+	<p class="name"><a href="#449" target="_blank">&amp;#x449;</a></p>
+</div>
+<br class="clr" />
+<h3>Chat - stroke</h3>
+<div class="glyph">
+	<p class="char">&#x44d;</p>
+	<p class="name"><a href="#44d" target="_blank">&amp;#x44d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x44e;</p>
+	<p class="name"><a href="#44e" target="_blank">&amp;#x44e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x44f;</p>
+	<p class="name"><a href="#44f" target="_blank">&amp;#x44f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x450;</p>
+	<p class="name"><a href="#450" target="_blank">&amp;#x450;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x451;</p>
+	<p class="name"><a href="#451" target="_blank">&amp;#x451;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x452;</p>
+	<p class="name"><a href="#452" target="_blank">&amp;#x452;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x453;</p>
+	<p class="name"><a href="#453" target="_blank">&amp;#x453;</a></p>
+</div>
+<br class="clr" />
+<h3>Chat - dk</h3>
+<div class="glyph">
+	<p class="char">&#x455;</p>
+	<p class="name"><a href="#455" target="_blank">&amp;#x455;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x456;</p>
+	<p class="name"><a href="#456" target="_blank">&amp;#x456;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x457;</p>
+	<p class="name"><a href="#457" target="_blank">&amp;#x457;</a></p>
+</div>
+<br class="clr" />
+<h3>Pin</h3>
+<div class="glyph">
+	<p class="char">&#x45b;</p>
+	<p class="name"><a href="#45b" target="_blank">&amp;#x45b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x45c;</p>
+	<p class="name"><a href="#45c" target="_blank">&amp;#x45c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x45d;</p>
+	<p class="name"><a href="#45d" target="_blank">&amp;#x45d;</a></p>
+</div>
+<br class="clr" />
+<h3>Pin 2</h3>
+<div class="glyph">
+	<p class="char">&#x45f;</p>
+	<p class="name"><a href="#45f" target="_blank">&amp;#x45f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x460;</p>
+	<p class="name"><a href="#460" target="_blank">&amp;#x460;</a></p>
+</div>
+<br class="clr" />
+<h3>Me / Her</h3>
+<div class="glyph">
+	<p class="char">&#x462;</p>
+	<p class="name"><a href="#462" target="_blank">&amp;#x462;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x463;</p>
+	<p class="name"><a href="#463" target="_blank">&amp;#x463;</a></p>
+</div>
+<br class="clr" />
+<h3>Users - more</h3>
+<div class="glyph">
+	<p class="char">&#x46f;</p>
+	<p class="name"><a href="#46f" target="_blank">&amp;#x46f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x470;</p>
+	<p class="name"><a href="#470" target="_blank">&amp;#x470;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x471;</p>
+	<p class="name"><a href="#471" target="_blank">&amp;#x471;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x472;</p>
+	<p class="name"><a href="#472" target="_blank">&amp;#x472;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x473;</p>
+	<p class="name"><a href="#473" target="_blank">&amp;#x473;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x474;</p>
+	<p class="name"><a href="#474" target="_blank">&amp;#x474;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x475;</p>
+	<p class="name"><a href="#475" target="_blank">&amp;#x475;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x476;</p>
+	<p class="name"><a href="#476" target="_blank">&amp;#x476;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x477;</p>
+	<p class="name"><a href="#477" target="_blank">&amp;#x477;</a></p>
+</div>
+<br class="clr" />
+<h3>Impers</h3>
+<div class="glyph">
+	<p class="char">&#x47a;</p>
+	<p class="name"><a href="#47a" target="_blank">&amp;#x47a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x47b;</p>
+	<p class="name"><a href="#47b" target="_blank">&amp;#x47b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x47c;</p>
+	<p class="name"><a href="#47c" target="_blank">&amp;#x47c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x47d;</p>
+	<p class="name"><a href="#47d" target="_blank">&amp;#x47d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x47e;</p>
+	<p class="name"><a href="#47e" target="_blank">&amp;#x47e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x47f;</p>
+	<p class="name"><a href="#47f" target="_blank">&amp;#x47f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x480;</p>
+	<p class="name"><a href="#480" target="_blank">&amp;#x480;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x481;</p>
+	<p class="name"><a href="#481" target="_blank">&amp;#x481;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x482;</p>
+	<p class="name"><a href="#482" target="_blank">&amp;#x482;</a></p>
+</div>
+<br class="clr" />
+<h3>Cath</h3>
+<div class="glyph">
+	<p class="char">&#x484;</p>
+	<p class="name"><a href="#484" target="_blank">&amp;#x484;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x485;</p>
+	<p class="name"><a href="#485" target="_blank">&amp;#x485;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x486;</p>
+	<p class="name"><a href="#486" target="_blank">&amp;#x486;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x487;</p>
+	<p class="name"><a href="#487" target="_blank">&amp;#x487;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x488;</p>
+	<p class="name"><a href="#488" target="_blank">&amp;#x488;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x489;</p>
+	<p class="name"><a href="#489" target="_blank">&amp;#x489;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x48a;</p>
+	<p class="name"><a href="#48a" target="_blank">&amp;#x48a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x48b;</p>
+	<p class="name"><a href="#48b" target="_blank">&amp;#x48b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x48c;</p>
+	<p class="name"><a href="#48c" target="_blank">&amp;#x48c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x48d;</p>
+	<p class="name"><a href="#48d" target="_blank">&amp;#x48d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x48e;</p>
+	<p class="name"><a href="#48e" target="_blank">&amp;#x48e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x48f;</p>
+	<p class="name"><a href="#48f" target="_blank">&amp;#x48f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x490;</p>
+	<p class="name"><a href="#490" target="_blank">&amp;#x490;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x491;</p>
+	<p class="name"><a href="#491" target="_blank">&amp;#x491;</a></p>
+</div>
+<br class="clr" />
+<h3>Sports - 2</h3>
+<div class="glyph">
+	<p class="char">&#x495;</p>
+	<p class="name"><a href="#495" target="_blank">&amp;#x495;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x496;</p>
+	<p class="name"><a href="#496" target="_blank">&amp;#x496;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x497;</p>
+	<p class="name"><a href="#497" target="_blank">&amp;#x497;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x498;</p>
+	<p class="name"><a href="#498" target="_blank">&amp;#x498;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x499;</p>
+	<p class="name"><a href="#499" target="_blank">&amp;#x499;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x49a;</p>
+	<p class="name"><a href="#49a" target="_blank">&amp;#x49a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x49b;</p>
+	<p class="name"><a href="#49b" target="_blank">&amp;#x49b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x49c;</p>
+	<p class="name"><a href="#49c" target="_blank">&amp;#x49c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x49d;</p>
+	<p class="name"><a href="#49d" target="_blank">&amp;#x49d;</a></p>
+</div>
+<br class="clr" />
+<h3>Cultur.</h3>
+<div class="glyph">
+	<p class="char">&#x49f;</p>
+	<p class="name"><a href="#49f" target="_blank">&amp;#x49f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4a0;</p>
+	<p class="name"><a href="#4a0" target="_blank">&amp;#x4a0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4a1;</p>
+	<p class="name"><a href="#4a1" target="_blank">&amp;#x4a1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4a2;</p>
+	<p class="name"><a href="#4a2" target="_blank">&amp;#x4a2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4a3;</p>
+	<p class="name"><a href="#4a3" target="_blank">&amp;#x4a3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4a4;</p>
+	<p class="name"><a href="#4a4" target="_blank">&amp;#x4a4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4a5;</p>
+	<p class="name"><a href="#4a5" target="_blank">&amp;#x4a5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4a6;</p>
+	<p class="name"><a href="#4a6" target="_blank">&amp;#x4a6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4a7;</p>
+	<p class="name"><a href="#4a7" target="_blank">&amp;#x4a7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4a8;</p>
+	<p class="name"><a href="#4a8" target="_blank">&amp;#x4a8;</a></p>
+</div>
+<br class="clr" />
+<h3>Constr / Repair</h3>
+<div class="glyph">
+	<p class="char">&#x4ac;</p>
+	<p class="name"><a href="#4ac" target="_blank">&amp;#x4ac;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4ad;</p>
+	<p class="name"><a href="#4ad" target="_blank">&amp;#x4ad;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4ae;</p>
+	<p class="name"><a href="#4ae" target="_blank">&amp;#x4ae;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4af;</p>
+	<p class="name"><a href="#4af" target="_blank">&amp;#x4af;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4b0;</p>
+	<p class="name"><a href="#4b0" target="_blank">&amp;#x4b0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4b1;</p>
+	<p class="name"><a href="#4b1" target="_blank">&amp;#x4b1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4b2;</p>
+	<p class="name"><a href="#4b2" target="_blank">&amp;#x4b2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4b3;</p>
+	<p class="name"><a href="#4b3" target="_blank">&amp;#x4b3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4b4;</p>
+	<p class="name"><a href="#4b4" target="_blank">&amp;#x4b4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4b5;</p>
+	<p class="name"><a href="#4b5" target="_blank">&amp;#x4b5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4b6;</p>
+	<p class="name"><a href="#4b6" target="_blank">&amp;#x4b6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4b7;</p>
+	<p class="name"><a href="#4b7" target="_blank">&amp;#x4b7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4b8;</p>
+	<p class="name"><a href="#4b8" target="_blank">&amp;#x4b8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4b9;</p>
+	<p class="name"><a href="#4b9" target="_blank">&amp;#x4b9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4ba;</p>
+	<p class="name"><a href="#4ba" target="_blank">&amp;#x4ba;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4bb;</p>
+	<p class="name"><a href="#4bb" target="_blank">&amp;#x4bb;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4bc;</p>
+	<p class="name"><a href="#4bc" target="_blank">&amp;#x4bc;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4bd;</p>
+	<p class="name"><a href="#4bd" target="_blank">&amp;#x4bd;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4be;</p>
+	<p class="name"><a href="#4be" target="_blank">&amp;#x4be;</a></p>
+</div>
+<br class="clr" />
+<h3>Food / Eat / Cook</h3>
+<div class="glyph">
+	<p class="char">&#x4c6;</p>
+	<p class="name"><a href="#4c6" target="_blank">&amp;#x4c6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4c7;</p>
+	<p class="name"><a href="#4c7" target="_blank">&amp;#x4c7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4c8;</p>
+	<p class="name"><a href="#4c8" target="_blank">&amp;#x4c8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4c9;</p>
+	<p class="name"><a href="#4c9" target="_blank">&amp;#x4c9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4ca;</p>
+	<p class="name"><a href="#4ca" target="_blank">&amp;#x4ca;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4cb;</p>
+	<p class="name"><a href="#4cb" target="_blank">&amp;#x4cb;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4cc;</p>
+	<p class="name"><a href="#4cc" target="_blank">&amp;#x4cc;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4cd;</p>
+	<p class="name"><a href="#4cd" target="_blank">&amp;#x4cd;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4ce;</p>
+	<p class="name"><a href="#4ce" target="_blank">&amp;#x4ce;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4cf;</p>
+	<p class="name"><a href="#4cf" target="_blank">&amp;#x4cf;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4d0;</p>
+	<p class="name"><a href="#4d0" target="_blank">&amp;#x4d0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4d1;</p>
+	<p class="name"><a href="#4d1" target="_blank">&amp;#x4d1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4d2;</p>
+	<p class="name"><a href="#4d2" target="_blank">&amp;#x4d2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4d3;</p>
+	<p class="name"><a href="#4d3" target="_blank">&amp;#x4d3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4d4;</p>
+	<p class="name"><a href="#4d4" target="_blank">&amp;#x4d4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4d5;</p>
+	<p class="name"><a href="#4d5" target="_blank">&amp;#x4d5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4d6;</p>
+	<p class="name"><a href="#4d6" target="_blank">&amp;#x4d6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4d7;</p>
+	<p class="name"><a href="#4d7" target="_blank">&amp;#x4d7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4d8;</p>
+	<p class="name"><a href="#4d8" target="_blank">&amp;#x4d8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4d9;</p>
+	<p class="name"><a href="#4d9" target="_blank">&amp;#x4d9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4da;</p>
+	<p class="name"><a href="#4da" target="_blank">&amp;#x4da;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4db;</p>
+	<p class="name"><a href="#4db" target="_blank">&amp;#x4db;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4dc;</p>
+	<p class="name"><a href="#4dc" target="_blank">&amp;#x4dc;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4dd;</p>
+	<p class="name"><a href="#4dd" target="_blank">&amp;#x4dd;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4de;</p>
+	<p class="name"><a href="#4de" target="_blank">&amp;#x4de;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4df;</p>
+	<p class="name"><a href="#4df" target="_blank">&amp;#x4df;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4e0;</p>
+	<p class="name"><a href="#4e0" target="_blank">&amp;#x4e0;</a></p>
+</div>
+<br class="clr" />
+<h3>Nursery</h3>
+<div class="glyph">
+	<p class="char">&#x4e7;</p>
+	<p class="name"><a href="#4e7" target="_blank">&amp;#x4e7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4e8;</p>
+	<p class="name"><a href="#4e8" target="_blank">&amp;#x4e8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4e9;</p>
+	<p class="name"><a href="#4e9" target="_blank">&amp;#x4e9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4ea;</p>
+	<p class="name"><a href="#4ea" target="_blank">&amp;#x4ea;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4eb;</p>
+	<p class="name"><a href="#4eb" target="_blank">&amp;#x4eb;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4ec;</p>
+	<p class="name"><a href="#4ec" target="_blank">&amp;#x4ec;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4ed;</p>
+	<p class="name"><a href="#4ed" target="_blank">&amp;#x4ed;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4ee;</p>
+	<p class="name"><a href="#4ee" target="_blank">&amp;#x4ee;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4ef;</p>
+	<p class="name"><a href="#4ef" target="_blank">&amp;#x4ef;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4f0;</p>
+	<p class="name"><a href="#4f0" target="_blank">&amp;#x4f0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4f1;</p>
+	<p class="name"><a href="#4f1" target="_blank">&amp;#x4f1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4f2;</p>
+	<p class="name"><a href="#4f2" target="_blank">&amp;#x4f2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4f3;</p>
+	<p class="name"><a href="#4f3" target="_blank">&amp;#x4f3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4f4;</p>
+	<p class="name"><a href="#4f4" target="_blank">&amp;#x4f4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4f5;</p>
+	<p class="name"><a href="#4f5" target="_blank">&amp;#x4f5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4f6;</p>
+	<p class="name"><a href="#4f6" target="_blank">&amp;#x4f6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4f7;</p>
+	<p class="name"><a href="#4f7" target="_blank">&amp;#x4f7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4f8;</p>
+	<p class="name"><a href="#4f8" target="_blank">&amp;#x4f8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4f9;</p>
+	<p class="name"><a href="#4f9" target="_blank">&amp;#x4f9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4fa;</p>
+	<p class="name"><a href="#4fa" target="_blank">&amp;#x4fa;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4fb;</p>
+	<p class="name"><a href="#4fb" target="_blank">&amp;#x4fb;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4fc;</p>
+	<p class="name"><a href="#4fc" target="_blank">&amp;#x4fc;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4fd;</p>
+	<p class="name"><a href="#4fd" target="_blank">&amp;#x4fd;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x4fe;</p>
+	<p class="name"><a href="#4fe" target="_blank">&amp;#x4fe;</a></p>
+</div>
+<br class="clr" />
+<h3>Data</h3>
+<div class="glyph">
+	<p class="char">&#x500;</p>
+	<p class="name"><a href="#500" target="_blank">&amp;#x500;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x501;</p>
+	<p class="name"><a href="#501" target="_blank">&amp;#x501;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x502;</p>
+	<p class="name"><a href="#502" target="_blank">&amp;#x502;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x503;</p>
+	<p class="name"><a href="#503" target="_blank">&amp;#x503;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x504;</p>
+	<p class="name"><a href="#504" target="_blank">&amp;#x504;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x505;</p>
+	<p class="name"><a href="#505" target="_blank">&amp;#x505;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x506;</p>
+	<p class="name"><a href="#506" target="_blank">&amp;#x506;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x507;</p>
+	<p class="name"><a href="#507" target="_blank">&amp;#x507;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x508;</p>
+	<p class="name"><a href="#508" target="_blank">&amp;#x508;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x509;</p>
+	<p class="name"><a href="#509" target="_blank">&amp;#x509;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x50a;</p>
+	<p class="name"><a href="#50a" target="_blank">&amp;#x50a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x50b;</p>
+	<p class="name"><a href="#50b" target="_blank">&amp;#x50b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x50c;</p>
+	<p class="name"><a href="#50c" target="_blank">&amp;#x50c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x50d;</p>
+	<p class="name"><a href="#50d" target="_blank">&amp;#x50d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x50e;</p>
+	<p class="name"><a href="#50e" target="_blank">&amp;#x50e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x50f;</p>
+	<p class="name"><a href="#50f" target="_blank">&amp;#x50f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x510;</p>
+	<p class="name"><a href="#510" target="_blank">&amp;#x510;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x511;</p>
+	<p class="name"><a href="#511" target="_blank">&amp;#x511;</a></p>
+</div>
+<br class="clr" />
+<h3>Comms</h3>
+<div class="glyph">
+	<p class="char">&#x513;</p>
+	<p class="name"><a href="#513" target="_blank">&amp;#x513;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x514;</p>
+	<p class="name"><a href="#514" target="_blank">&amp;#x514;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x515;</p>
+	<p class="name"><a href="#515" target="_blank">&amp;#x515;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x516;</p>
+	<p class="name"><a href="#516" target="_blank">&amp;#x516;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x517;</p>
+	<p class="name"><a href="#517" target="_blank">&amp;#x517;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x518;</p>
+	<p class="name"><a href="#518" target="_blank">&amp;#x518;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x519;</p>
+	<p class="name"><a href="#519" target="_blank">&amp;#x519;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x51a;</p>
+	<p class="name"><a href="#51a" target="_blank">&amp;#x51a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x51b;</p>
+	<p class="name"><a href="#51b" target="_blank">&amp;#x51b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x51c;</p>
+	<p class="name"><a href="#51c" target="_blank">&amp;#x51c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x51d;</p>
+	<p class="name"><a href="#51d" target="_blank">&amp;#x51d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x51e;</p>
+	<p class="name"><a href="#51e" target="_blank">&amp;#x51e;</a></p>
+</div>
+<br class="clr" />
+<h3>Player Ctls.</h3>
+<div class="glyph">
+	<p class="char">&#x531;</p>
+	<p class="name"><a href="#531" target="_blank">&amp;#x531;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x532;</p>
+	<p class="name"><a href="#532" target="_blank">&amp;#x532;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x533;</p>
+	<p class="name"><a href="#533" target="_blank">&amp;#x533;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x534;</p>
+	<p class="name"><a href="#534" target="_blank">&amp;#x534;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x535;</p>
+	<p class="name"><a href="#535" target="_blank">&amp;#x535;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x536;</p>
+	<p class="name"><a href="#536" target="_blank">&amp;#x536;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x537;</p>
+	<p class="name"><a href="#537" target="_blank">&amp;#x537;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x538;</p>
+	<p class="name"><a href="#538" target="_blank">&amp;#x538;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x539;</p>
+	<p class="name"><a href="#539" target="_blank">&amp;#x539;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x53a;</p>
+	<p class="name"><a href="#53a" target="_blank">&amp;#x53a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x53b;</p>
+	<p class="name"><a href="#53b" target="_blank">&amp;#x53b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x53c;</p>
+	<p class="name"><a href="#53c" target="_blank">&amp;#x53c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x53d;</p>
+	<p class="name"><a href="#53d" target="_blank">&amp;#x53d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x53e;</p>
+	<p class="name"><a href="#53e" target="_blank">&amp;#x53e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x53f;</p>
+	<p class="name"><a href="#53f" target="_blank">&amp;#x53f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x540;</p>
+	<p class="name"><a href="#540" target="_blank">&amp;#x540;</a></p>
+</div>
+<br class="clr" />
+<h3>Ctls dk</h3>
+<div class="glyph">
+	<p class="char">&#x542;</p>
+	<p class="name"><a href="#542" target="_blank">&amp;#x542;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x543;</p>
+	<p class="name"><a href="#543" target="_blank">&amp;#x543;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x544;</p>
+	<p class="name"><a href="#544" target="_blank">&amp;#x544;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x545;</p>
+	<p class="name"><a href="#545" target="_blank">&amp;#x545;</a></p>
+</div>
+<br class="clr" />
+<h3>Weather</h3>
+<div class="glyph">
+	<p class="char">&#x54a;</p>
+	<p class="name"><a href="#54a" target="_blank">&amp;#x54a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x54b;</p>
+	<p class="name"><a href="#54b" target="_blank">&amp;#x54b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x54c;</p>
+	<p class="name"><a href="#54c" target="_blank">&amp;#x54c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x54d;</p>
+	<p class="name"><a href="#54d" target="_blank">&amp;#x54d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x54e;</p>
+	<p class="name"><a href="#54e" target="_blank">&amp;#x54e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x54f;</p>
+	<p class="name"><a href="#54f" target="_blank">&amp;#x54f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x550;</p>
+	<p class="name"><a href="#550" target="_blank">&amp;#x550;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x551;</p>
+	<p class="name"><a href="#551" target="_blank">&amp;#x551;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x552;</p>
+	<p class="name"><a href="#552" target="_blank">&amp;#x552;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x553;</p>
+	<p class="name"><a href="#553" target="_blank">&amp;#x553;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x554;</p>
+	<p class="name"><a href="#554" target="_blank">&amp;#x554;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x555;</p>
+	<p class="name"><a href="#555" target="_blank">&amp;#x555;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x556;</p>
+	<p class="name"><a href="#556" target="_blank">&amp;#x556;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x557;</p>
+	<p class="name"><a href="#557" target="_blank">&amp;#x557;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x558;</p>
+	<p class="name"><a href="#558" target="_blank">&amp;#x558;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x559;</p>
+	<p class="name"><a href="#559" target="_blank">&amp;#x559;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x55a;</p>
+	<p class="name"><a href="#55a" target="_blank">&amp;#x55a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x55b;</p>
+	<p class="name"><a href="#55b" target="_blank">&amp;#x55b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x55c;</p>
+	<p class="name"><a href="#55c" target="_blank">&amp;#x55c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x55d;</p>
+	<p class="name"><a href="#55d" target="_blank">&amp;#x55d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x55e;</p>
+	<p class="name"><a href="#55e" target="_blank">&amp;#x55e;</a></p>
+</div>
+<br class="clr" />
+<h3>Smileys</h3>
+<div class="glyph">
+	<p class="char">&#x564;</p>
+	<p class="name"><a href="#564" target="_blank">&amp;#x564;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x565;</p>
+	<p class="name"><a href="#565" target="_blank">&amp;#x565;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x566;</p>
+	<p class="name"><a href="#566" target="_blank">&amp;#x566;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x567;</p>
+	<p class="name"><a href="#567" target="_blank">&amp;#x567;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x568;</p>
+	<p class="name"><a href="#568" target="_blank">&amp;#x568;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x569;</p>
+	<p class="name"><a href="#569" target="_blank">&amp;#x569;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x56a;</p>
+	<p class="name"><a href="#56a" target="_blank">&amp;#x56a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x56b;</p>
+	<p class="name"><a href="#56b" target="_blank">&amp;#x56b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x56c;</p>
+	<p class="name"><a href="#56c" target="_blank">&amp;#x56c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x56d;</p>
+	<p class="name"><a href="#56d" target="_blank">&amp;#x56d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x56e;</p>
+	<p class="name"><a href="#56e" target="_blank">&amp;#x56e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x56f;</p>
+	<p class="name"><a href="#56f" target="_blank">&amp;#x56f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x570;</p>
+	<p class="name"><a href="#570" target="_blank">&amp;#x570;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x571;</p>
+	<p class="name"><a href="#571" target="_blank">&amp;#x571;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x572;</p>
+	<p class="name"><a href="#572" target="_blank">&amp;#x572;</a></p>
+</div>
+<br class="clr" />
+<h3>Rock paper scissors</h3>
+<div class="glyph">
+	<p class="char">&#x574;</p>
+	<p class="name"><a href="#574" target="_blank">&amp;#x574;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x575;</p>
+	<p class="name"><a href="#575" target="_blank">&amp;#x575;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x576;</p>
+	<p class="name"><a href="#576" target="_blank">&amp;#x576;</a></p>
+</div>
+<br class="clr" />
+<h3>Computer</h3>
+<div class="glyph">
+	<p class="char">&#x10a0;</p>
+	<p class="name"><a href="#10a0" target="_blank">&amp;#x10a0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10a1;</p>
+	<p class="name"><a href="#10a1" target="_blank">&amp;#x10a1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10a2;</p>
+	<p class="name"><a href="#10a2" target="_blank">&amp;#x10a2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10a3;</p>
+	<p class="name"><a href="#10a3" target="_blank">&amp;#x10a3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10a4;</p>
+	<p class="name"><a href="#10a4" target="_blank">&amp;#x10a4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10a5;</p>
+	<p class="name"><a href="#10a5" target="_blank">&amp;#x10a5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10a6;</p>
+	<p class="name"><a href="#10a6" target="_blank">&amp;#x10a6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10a7;</p>
+	<p class="name"><a href="#10a7" target="_blank">&amp;#x10a7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10a8;</p>
+	<p class="name"><a href="#10a8" target="_blank">&amp;#x10a8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10a9;</p>
+	<p class="name"><a href="#10a9" target="_blank">&amp;#x10a9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10aa;</p>
+	<p class="name"><a href="#10aa" target="_blank">&amp;#x10aa;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10ab;</p>
+	<p class="name"><a href="#10ab" target="_blank">&amp;#x10ab;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10ac;</p>
+	<p class="name"><a href="#10ac" target="_blank">&amp;#x10ac;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10ad;</p>
+	<p class="name"><a href="#10ad" target="_blank">&amp;#x10ad;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10ae;</p>
+	<p class="name"><a href="#10ae" target="_blank">&amp;#x10ae;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10af;</p>
+	<p class="name"><a href="#10af" target="_blank">&amp;#x10af;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10b0;</p>
+	<p class="name"><a href="#10b0" target="_blank">&amp;#x10b0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10b1;</p>
+	<p class="name"><a href="#10b1" target="_blank">&amp;#x10b1;</a></p>
+</div>
+<br class="clr" />
+<h3>Power-sym</h3>
+<div class="glyph">
+	<p class="char">&#x10b3;</p>
+	<p class="name"><a href="#10b3" target="_blank">&amp;#x10b3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10b4;</p>
+	<p class="name"><a href="#10b4" target="_blank">&amp;#x10b4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10b5;</p>
+	<p class="name"><a href="#10b5" target="_blank">&amp;#x10b5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10b6;</p>
+	<p class="name"><a href="#10b6" target="_blank">&amp;#x10b6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10b7;</p>
+	<p class="name"><a href="#10b7" target="_blank">&amp;#x10b7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10b8;</p>
+	<p class="name"><a href="#10b8" target="_blank">&amp;#x10b8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10b9;</p>
+	<p class="name"><a href="#10b9" target="_blank">&amp;#x10b9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10ba;</p>
+	<p class="name"><a href="#10ba" target="_blank">&amp;#x10ba;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10bb;</p>
+	<p class="name"><a href="#10bb" target="_blank">&amp;#x10bb;</a></p>
+</div>
+<br class="clr" />
+<h3>Databases</h3>
+<div class="glyph">
+	<p class="char">&#x10d1;</p>
+	<p class="name"><a href="#10d1" target="_blank">&amp;#x10d1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10d2;</p>
+	<p class="name"><a href="#10d2" target="_blank">&amp;#x10d2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10d3;</p>
+	<p class="name"><a href="#10d3" target="_blank">&amp;#x10d3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10d4;</p>
+	<p class="name"><a href="#10d4" target="_blank">&amp;#x10d4;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10d5;</p>
+	<p class="name"><a href="#10d5" target="_blank">&amp;#x10d5;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10d6;</p>
+	<p class="name"><a href="#10d6" target="_blank">&amp;#x10d6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10d7;</p>
+	<p class="name"><a href="#10d7" target="_blank">&amp;#x10d7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10d8;</p>
+	<p class="name"><a href="#10d8" target="_blank">&amp;#x10d8;</a></p>
+</div>
+<br class="clr" />
+<h3>Tape</h3>
+<div class="glyph">
+	<p class="char">&#x10da;</p>
+	<p class="name"><a href="#10da" target="_blank">&amp;#x10da;</a></p>
+</div>
+<br class="clr" />
+<h3>Add / rmv</h3>
+<div class="glyph">
+	<p class="char">&#x10e0;</p>
+	<p class="name"><a href="#10e0" target="_blank">&amp;#x10e0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10e1;</p>
+	<p class="name"><a href="#10e1" target="_blank">&amp;#x10e1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10e2;</p>
+	<p class="name"><a href="#10e2" target="_blank">&amp;#x10e2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10e3;</p>
+	<p class="name"><a href="#10e3" target="_blank">&amp;#x10e3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10e4;</p>
+	<p class="name"><a href="#10e4" target="_blank">&amp;#x10e4;</a></p>
+</div>
+<br class="clr" />
+<h3>Organiz.</h3>
+<div class="glyph">
+	<p class="char">&#x10e6;</p>
+	<p class="name"><a href="#10e6" target="_blank">&amp;#x10e6;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10e7;</p>
+	<p class="name"><a href="#10e7" target="_blank">&amp;#x10e7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x10e8;</p>
+	<p class="name"><a href="#10e8" target="_blank">&amp;#x10e8;</a></p>
+</div>
+<br class="clr" />
+<h3>Developm.</h3>
+<div class="glyph">
+	<p class="char">&#x2701;</p>
+	<p class="name"><a href="#2701" target="_blank">&amp;#x2701;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2702;</p>
+	<p class="name"><a href="#2702" target="_blank">&amp;#x2702;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2703;</p>
+	<p class="name"><a href="#2703" target="_blank">&amp;#x2703;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2704;</p>
+	<p class="name"><a href="#2704" target="_blank">&amp;#x2704;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2705;</p>
+	<p class="name"><a href="#2705" target="_blank">&amp;#x2705;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2706;</p>
+	<p class="name"><a href="#2706" target="_blank">&amp;#x2706;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2707;</p>
+	<p class="name"><a href="#2707" target="_blank">&amp;#x2707;</a></p>
+</div>
+<br class="clr" />
+<h3>Symb</h3>
+<div class="glyph">
+	<p class="char">&#x2709;</p>
+	<p class="name"><a href="#2709" target="_blank">&amp;#x2709;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x270a;</p>
+	<p class="name"><a href="#270a" target="_blank">&amp;#x270a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x270b;</p>
+	<p class="name"><a href="#270b" target="_blank">&amp;#x270b;</a></p>
+</div>
+<br class="clr" />
+<h3>App</h3>
+<div class="glyph">
+	<p class="char">&#x270d;</p>
+	<p class="name"><a href="#270d" target="_blank">&amp;#x270d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x270e;</p>
+	<p class="name"><a href="#270e" target="_blank">&amp;#x270e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x270f;</p>
+	<p class="name"><a href="#270f" target="_blank">&amp;#x270f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2710;</p>
+	<p class="name"><a href="#2710" target="_blank">&amp;#x2710;</a></p>
+</div>
+<br class="clr" />
+<h3>Protect</h3>
+<div class="glyph">
+	<p class="char">&#x2712;</p>
+	<p class="name"><a href="#2712" target="_blank">&amp;#x2712;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2713;</p>
+	<p class="name"><a href="#2713" target="_blank">&amp;#x2713;</a></p>
+</div>
+<br class="clr" />
+<h3>Secure</h3>
+<div class="glyph">
+	<p class="char">&#x2715;</p>
+	<p class="name"><a href="#2715" target="_blank">&amp;#x2715;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2716;</p>
+	<p class="name"><a href="#2716" target="_blank">&amp;#x2716;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2717;</p>
+	<p class="name"><a href="#2717" target="_blank">&amp;#x2717;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2718;</p>
+	<p class="name"><a href="#2718" target="_blank">&amp;#x2718;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2719;</p>
+	<p class="name"><a href="#2719" target="_blank">&amp;#x2719;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x271a;</p>
+	<p class="name"><a href="#271a" target="_blank">&amp;#x271a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x271b;</p>
+	<p class="name"><a href="#271b" target="_blank">&amp;#x271b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x271c;</p>
+	<p class="name"><a href="#271c" target="_blank">&amp;#x271c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x271d;</p>
+	<p class="name"><a href="#271d" target="_blank">&amp;#x271d;</a></p>
+</div>
+<br class="clr" />
+<h3>Paint</h3>
+<div class="glyph">
+	<p class="char">&#x271f;</p>
+	<p class="name"><a href="#271f" target="_blank">&amp;#x271f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2720;</p>
+	<p class="name"><a href="#2720" target="_blank">&amp;#x2720;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2721;</p>
+	<p class="name"><a href="#2721" target="_blank">&amp;#x2721;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2722;</p>
+	<p class="name"><a href="#2722" target="_blank">&amp;#x2722;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2723;</p>
+	<p class="name"><a href="#2723" target="_blank">&amp;#x2723;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2724;</p>
+	<p class="name"><a href="#2724" target="_blank">&amp;#x2724;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2725;</p>
+	<p class="name"><a href="#2725" target="_blank">&amp;#x2725;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2726;</p>
+	<p class="name"><a href="#2726" target="_blank">&amp;#x2726;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2727;</p>
+	<p class="name"><a href="#2727" target="_blank">&amp;#x2727;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2728;</p>
+	<p class="name"><a href="#2728" target="_blank">&amp;#x2728;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2729;</p>
+	<p class="name"><a href="#2729" target="_blank">&amp;#x2729;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x272a;</p>
+	<p class="name"><a href="#272a" target="_blank">&amp;#x272a;</a></p>
+</div>
+<br class="clr" />
+<h3>Paint 2</h3>
+<div class="glyph">
+	<p class="char">&#x272c;</p>
+	<p class="name"><a href="#272c" target="_blank">&amp;#x272c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x272d;</p>
+	<p class="name"><a href="#272d" target="_blank">&amp;#x272d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x272e;</p>
+	<p class="name"><a href="#272e" target="_blank">&amp;#x272e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x272f;</p>
+	<p class="name"><a href="#272f" target="_blank">&amp;#x272f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2730;</p>
+	<p class="name"><a href="#2730" target="_blank">&amp;#x2730;</a></p>
+</div>
+<br class="clr" />
+<h3>Align text</h3>
+<div class="glyph">
+	<p class="char">&#x2732;</p>
+	<p class="name"><a href="#2732" target="_blank">&amp;#x2732;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2733;</p>
+	<p class="name"><a href="#2733" target="_blank">&amp;#x2733;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2734;</p>
+	<p class="name"><a href="#2734" target="_blank">&amp;#x2734;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2735;</p>
+	<p class="name"><a href="#2735" target="_blank">&amp;#x2735;</a></p>
+</div>
+<br class="clr" />
+<h3>Flip</h3>
+<div class="glyph">
+	<p class="char">&#x2737;</p>
+	<p class="name"><a href="#2737" target="_blank">&amp;#x2737;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2738;</p>
+	<p class="name"><a href="#2738" target="_blank">&amp;#x2738;</a></p>
+</div>
+<br class="clr" />
+<h3>Vis</h3>
+<div class="glyph">
+	<p class="char">&#x273a;</p>
+	<p class="name"><a href="#273a" target="_blank">&amp;#x273a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x273b;</p>
+	<p class="name"><a href="#273b" target="_blank">&amp;#x273b;</a></p>
+</div>
+<br class="clr" />
+<h3>Magnif</h3>
+<div class="glyph">
+	<p class="char">&#x273d;</p>
+	<p class="name"><a href="#273d" target="_blank">&amp;#x273d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x273e;</p>
+	<p class="name"><a href="#273e" target="_blank">&amp;#x273e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x273f;</p>
+	<p class="name"><a href="#273f" target="_blank">&amp;#x273f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2740;</p>
+	<p class="name"><a href="#2740" target="_blank">&amp;#x2740;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2741;</p>
+	<p class="name"><a href="#2741" target="_blank">&amp;#x2741;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2742;</p>
+	<p class="name"><a href="#2742" target="_blank">&amp;#x2742;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2743;</p>
+	<p class="name"><a href="#2743" target="_blank">&amp;#x2743;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2744;</p>
+	<p class="name"><a href="#2744" target="_blank">&amp;#x2744;</a></p>
+</div>
+<br class="clr" />
+<h3>Radio</h3>
+<div class="glyph">
+	<p class="char">&#x2746;</p>
+	<p class="name"><a href="#2746" target="_blank">&amp;#x2746;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2747;</p>
+	<p class="name"><a href="#2747" target="_blank">&amp;#x2747;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2748;</p>
+	<p class="name"><a href="#2748" target="_blank">&amp;#x2748;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2749;</p>
+	<p class="name"><a href="#2749" target="_blank">&amp;#x2749;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x274a;</p>
+	<p class="name"><a href="#274a" target="_blank">&amp;#x274a;</a></p>
+</div>
+<br class="clr" />
+<h3>Battery</h3>
+<div class="glyph">
+	<p class="char">&#x274c;</p>
+	<p class="name"><a href="#274c" target="_blank">&amp;#x274c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x274d;</p>
+	<p class="name"><a href="#274d" target="_blank">&amp;#x274d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x274e;</p>
+	<p class="name"><a href="#274e" target="_blank">&amp;#x274e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x274f;</p>
+	<p class="name"><a href="#274f" target="_blank">&amp;#x274f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2750;</p>
+	<p class="name"><a href="#2750" target="_blank">&amp;#x2750;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2751;</p>
+	<p class="name"><a href="#2751" target="_blank">&amp;#x2751;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2752;</p>
+	<p class="name"><a href="#2752" target="_blank">&amp;#x2752;</a></p>
+</div>
+<br class="clr" />
+<h3>Smartphones</h3>
+<div class="glyph">
+	<p class="char">&#x2754;</p>
+	<p class="name"><a href="#2754" target="_blank">&amp;#x2754;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2755;</p>
+	<p class="name"><a href="#2755" target="_blank">&amp;#x2755;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2756;</p>
+	<p class="name"><a href="#2756" target="_blank">&amp;#x2756;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2757;</p>
+	<p class="name"><a href="#2757" target="_blank">&amp;#x2757;</a></p>
+</div>
+<br class="clr" />
+<h3>Fax Business Ofice</h3>
+<div class="glyph">
+	<p class="char">&#x2759;</p>
+	<p class="name"><a href="#2759" target="_blank">&amp;#x2759;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x275a;</p>
+	<p class="name"><a href="#275a" target="_blank">&amp;#x275a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x275b;</p>
+	<p class="name"><a href="#275b" target="_blank">&amp;#x275b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x275c;</p>
+	<p class="name"><a href="#275c" target="_blank">&amp;#x275c;</a></p>
+</div>
+<br class="clr" />
+<h3>Paperwork</h3>
+<div class="glyph">
+	<p class="char">&#x275e;</p>
+	<p class="name"><a href="#275e" target="_blank">&amp;#x275e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x275f;</p>
+	<p class="name"><a href="#275f" target="_blank">&amp;#x275f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2760;</p>
+	<p class="name"><a href="#2760" target="_blank">&amp;#x2760;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2761;</p>
+	<p class="name"><a href="#2761" target="_blank">&amp;#x2761;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2762;</p>
+	<p class="name"><a href="#2762" target="_blank">&amp;#x2762;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2763;</p>
+	<p class="name"><a href="#2763" target="_blank">&amp;#x2763;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2764;</p>
+	<p class="name"><a href="#2764" target="_blank">&amp;#x2764;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2765;</p>
+	<p class="name"><a href="#2765" target="_blank">&amp;#x2765;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2766;</p>
+	<p class="name"><a href="#2766" target="_blank">&amp;#x2766;</a></p>
+</div>
+<br class="clr" />
+<h3>Paperwork 2</h3>
+<div class="glyph">
+	<p class="char">&#x2768;</p>
+	<p class="name"><a href="#2768" target="_blank">&amp;#x2768;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2769;</p>
+	<p class="name"><a href="#2769" target="_blank">&amp;#x2769;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x276a;</p>
+	<p class="name"><a href="#276a" target="_blank">&amp;#x276a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x276b;</p>
+	<p class="name"><a href="#276b" target="_blank">&amp;#x276b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x276c;</p>
+	<p class="name"><a href="#276c" target="_blank">&amp;#x276c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x276d;</p>
+	<p class="name"><a href="#276d" target="_blank">&amp;#x276d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x276e;</p>
+	<p class="name"><a href="#276e" target="_blank">&amp;#x276e;</a></p>
+</div>
+<br class="clr" />
+<h3>Instit.</h3>
+<div class="glyph">
+	<p class="char">&#x2772;</p>
+	<p class="name"><a href="#2772" target="_blank">&amp;#x2772;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2773;</p>
+	<p class="name"><a href="#2773" target="_blank">&amp;#x2773;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2774;</p>
+	<p class="name"><a href="#2774" target="_blank">&amp;#x2774;</a></p>
+</div>
+<br class="clr" />
+<h3>Zip.</h3>
+<div class="glyph">
+	<p class="char">&#x2776;</p>
+	<p class="name"><a href="#2776" target="_blank">&amp;#x2776;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2777;</p>
+	<p class="name"><a href="#2777" target="_blank">&amp;#x2777;</a></p>
+</div>
+<br class="clr" />
+<h3>Social.</h3>
+<div class="glyph">
+	<p class="char">&#x277e;</p>
+	<p class="name"><a href="#277e" target="_blank">&amp;#x277e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x277f;</p>
+	<p class="name"><a href="#277f" target="_blank">&amp;#x277f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2780;</p>
+	<p class="name"><a href="#2780" target="_blank">&amp;#x2780;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2781;</p>
+	<p class="name"><a href="#2781" target="_blank">&amp;#x2781;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2782;</p>
+	<p class="name"><a href="#2782" target="_blank">&amp;#x2782;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2783;</p>
+	<p class="name"><a href="#2783" target="_blank">&amp;#x2783;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2784;</p>
+	<p class="name"><a href="#2784" target="_blank">&amp;#x2784;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2785;</p>
+	<p class="name"><a href="#2785" target="_blank">&amp;#x2785;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2786;</p>
+	<p class="name"><a href="#2786" target="_blank">&amp;#x2786;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2787;</p>
+	<p class="name"><a href="#2787" target="_blank">&amp;#x2787;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2788;</p>
+	<p class="name"><a href="#2788" target="_blank">&amp;#x2788;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2789;</p>
+	<p class="name"><a href="#2789" target="_blank">&amp;#x2789;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x278a;</p>
+	<p class="name"><a href="#278a" target="_blank">&amp;#x278a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x278b;</p>
+	<p class="name"><a href="#278b" target="_blank">&amp;#x278b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x278c;</p>
+	<p class="name"><a href="#278c" target="_blank">&amp;#x278c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x278d;</p>
+	<p class="name"><a href="#278d" target="_blank">&amp;#x278d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x278e;</p>
+	<p class="name"><a href="#278e" target="_blank">&amp;#x278e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x278f;</p>
+	<p class="name"><a href="#278f" target="_blank">&amp;#x278f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2790;</p>
+	<p class="name"><a href="#2790" target="_blank">&amp;#x2790;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2791;</p>
+	<p class="name"><a href="#2791" target="_blank">&amp;#x2791;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2792;</p>
+	<p class="name"><a href="#2792" target="_blank">&amp;#x2792;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2793;</p>
+	<p class="name"><a href="#2793" target="_blank">&amp;#x2793;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2794;</p>
+	<p class="name"><a href="#2794" target="_blank">&amp;#x2794;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2795;</p>
+	<p class="name"><a href="#2795" target="_blank">&amp;#x2795;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2796;</p>
+	<p class="name"><a href="#2796" target="_blank">&amp;#x2796;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2797;</p>
+	<p class="name"><a href="#2797" target="_blank">&amp;#x2797;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2798;</p>
+	<p class="name"><a href="#2798" target="_blank">&amp;#x2798;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x2799;</p>
+	<p class="name"><a href="#2799" target="_blank">&amp;#x2799;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x279a;</p>
+	<p class="name"><a href="#279a" target="_blank">&amp;#x279a;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x279b;</p>
+	<p class="name"><a href="#279b" target="_blank">&amp;#x279b;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x279c;</p>
+	<p class="name"><a href="#279c" target="_blank">&amp;#x279c;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x279d;</p>
+	<p class="name"><a href="#279d" target="_blank">&amp;#x279d;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x279e;</p>
+	<p class="name"><a href="#279e" target="_blank">&amp;#x279e;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x279f;</p>
+	<p class="name"><a href="#279f" target="_blank">&amp;#x279f;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x27a0;</p>
+	<p class="name"><a href="#27a0" target="_blank">&amp;#x27a0;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x27a1;</p>
+	<p class="name"><a href="#27a1" target="_blank">&amp;#x27a1;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x27a2;</p>
+	<p class="name"><a href="#27a2" target="_blank">&amp;#x27a2;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x27a3;</p>
+	<p class="name"><a href="#27a3" target="_blank">&amp;#x27a3;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x27a4;</p>
+	<p class="name"><a href="#27a4" target="_blank">&amp;#x27a4;</a></p>
+</div>
+<br class="clr" />
+<h3>Webtech.</h3>
+<div class="glyph">
+	<p class="char">&#x27a7;</p>
+	<p class="name"><a href="#27a7" target="_blank">&amp;#x27a7;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x27a8;</p>
+	<p class="name"><a href="#27a8" target="_blank">&amp;#x27a8;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x27a9;</p>
+	<p class="name"><a href="#27a9" target="_blank">&amp;#x27a9;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x27aa;</p>
+	<p class="name"><a href="#27aa" target="_blank">&amp;#x27aa;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x27ab;</p>
+	<p class="name"><a href="#27ab" target="_blank">&amp;#x27ab;</a></p>
+</div>
+<div class="glyph">
+	<p class="char">&#x27ac;</p>
+	<p class="name"><a href="#27ac" target="_blank">&amp;#x27ac;</a></p>
+</div>
+<br class="clr" />
+</body>
+</html>

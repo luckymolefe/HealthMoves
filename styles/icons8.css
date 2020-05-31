@@ -1,0 +1,13 @@
+@font-face { 
+	font-family: 'metro'; 
+	src: url('icons8/metro-icons-fixed-2000-webfont.eot?x=1351252202'); 
+	src: url('icons8/metro-icons-fixed-2000-webfont.eot?#iefix') format('embedded-opentype'),  url('icons8/metro-icons-fixed-2000-webfont.woff?x=1351252202') format('woff'),  url('icons8/metro-icons-fixed-2000-webfont.ttf?x=1351252202') format('truetype'),  url('icons8/metro-icons-fixed-2000-webfont.svg?x=1351252202#metroicons8-3regular') format('svg'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
+/*.glyph { float: left; display: block; margin: 0 1px 1px 0; background: #666; }
+.glyph p { margin: 4px 0; padding: 0 }
+.glyph .char { font-family: "metro"; font-size: 64px; text-align: center; line-height: 64px; min-width: 80px; }
+.glyph .name { font-size: 11px; text-align: center; text-transform: uppercase; padding: 2px; margin: 0; font-family: "Courier New", Courier, monospace; }
+h3 { padding: 0; margin: 20px 0 5px 0; }
+#controls { background: #000; padding: 20px; margin:5px 0; }*/

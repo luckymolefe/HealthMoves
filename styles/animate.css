@@ -1,0 +1,30 @@
+/**/
+.container-panel:nth-child(1) {
+  animation: pop .3s ease-in forwards;
+  -webkit-animation-delay: 0s;
+}
+.container-panel:nth-child(2) {
+  animation: pop .3s ease-in forwards;
+  -webkit-animation-delay: .55s;
+}
+.container-panel:nth-child(3) {
+  animation: pop .3s ease-in forwards;
+  -webkit-animation-delay: 1s;
+}
+/*----------------------------------------------*/
+.popIn {
+  animation: pop .3s ease-in forwards;
+}
+@keyframes pop {
+  0%   {transform: scale(0); opacity: 0; }
+  90%   {transform: scale(1.1); opacity: 0.55; }
+  100% {transform: scale(1); opacity: 1; }
+}
+
+.popOut {
+  animation: zoomOut .3s ease forwards;
+}
+@keyframes zoomOut {
+  0%   { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0); opacity: 0; }
+}
